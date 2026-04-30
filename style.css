@@ -453,7 +453,7 @@ h6 {
 }
 
 .topic-title {
-	font-family: 'PT Serif', serif;
+	font-family: "Publico Headline", 'Playfair Display', serif;
 	font-size: 55px;
 	font-weight: 900;
 	color: #111;
@@ -541,7 +541,7 @@ h6 {
 .more-stories-inner {}
 
 .section-title {
-	font-family: 'PT Serif', serif;
+	font-family: "Publico Headline", 'Playfair Display', serif;
 	font-size: 56px;
 	font-weight: 900;
 	color: #111;
@@ -787,18 +787,7 @@ h6 {
 /* ===== The Week in Politics ===== */
 .week-politics {
 	position: relative;
-	margin-top: 50px;
-	padding-top: 30px;
-}
-
-.week-politics::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100vw;
-	border-top: 1px solid #e0e0e0;
+	margin-top: 35px;
 }
 
 .week-politics-header {
@@ -825,7 +814,7 @@ h6 {
 
 .week-politics-top {
 	display: grid;
-	grid-template-columns: 260px auto 300px;
+	grid-template-columns: 290px auto 300px;
 	column-gap: 25px;
 	margin-bottom: 40px;
 }
@@ -846,27 +835,18 @@ h6 {
 
 .wp-featured-text p {
 	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.45;
 	color: #333;
 	margin-bottom: 6px;
 }
 
-.wp-featured-image img {
-	width: 100%;
-	object-fit: cover;
-}
-
-.wp-sidebar-card img {
-	object-fit: cover;
-}
-
 .wp-sidebar-card h3 {
-	font-family: 'PT Serif', serif;
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 1.2;
+	font-family: "Publico Headline", serif;
+	font-size: 27px;
+	font-weight: 900;
+	line-height: 0.95;
 	color: #111;
 	margin-top: 12px;
 	margin-bottom: 4px;
@@ -888,15 +868,12 @@ h6 {
 	max-width: 300px;
 }
 
-.wp-card img {
-	object-fit: cover;
-}
 
 .wp-card h3 {
-	font-family: 'PT Serif', serif;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 1.2;
+	font-family: "Publico Headline", serif;
+	font-size: 27px;
+	font-weight: 900;
+	line-height: 0.95;
 	color: #111;
 	margin-top: 12px;
 	margin-bottom: 4px;
@@ -905,6 +882,283 @@ h6 {
 .wp-card h3 a:hover {
 	color: #5f5f5f;
 	text-decoration: underline;
+}
+
+/* ===== Managing Your Money ===== */
+.managing-money {
+	background-color: #00711A;
+	margin-top: 40px;
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+	padding: 35px calc(50vw - 50%) 55px;
+}
+
+.managing-money-inner {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.managing-money-header {
+	display: flex;
+	align-items: baseline;
+	gap: 15px;
+	margin-bottom: 17px;
+}
+
+.managing-money-header h2 {
+	font-family: "Publico Headline", 'Playfair Display', serif;
+	font-size: 56px;
+	font-weight: 900;
+	color: #fff;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+
+.managing-money-header .more-link-inline {
+	color: #fff;
+}
+
+.managing-money-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.mm-card img {
+	margin-bottom: 7px;
+}
+
+.mm-card h3 {
+	font-family: "Publico Headline", 'Playfair Display', serif;
+	font-size: 24px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1.1;
+	margin-bottom: 10px;
+}
+
+.mm-card h3 a:hover {
+	text-decoration: underline;
+	color: #e6f4fb;
+}
+
+.mm-card p {
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgb(255, 255, 255);
+	line-height: 1.3;
+	margin-bottom: 10px;
+}
+
+.mm-date {
+	display: block;
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 22px;
+}
+
+.mm-sublinks {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.mm-sublinks a {
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1;
+}
+
+.mm-sublinks a:hover {
+	text-decoration: underline;
+	color: #e6f4fb;
+}
+
+/* ===== Top Videos ===== */
+.top-videos {
+	background-color: #111;
+	margin-top: 40px;
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+	padding: 45px calc(50vw - 50%) 55px;
+	color: #fff;
+}
+
+.top-videos-inner {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.tv-header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 25px;
+}
+
+.tv-text-col {
+	width: 300px;
+}
+
+.tv-featured-video {
+	margin-top: 82px;
+}
+
+.tv-text-col h2 {
+	font-family: "Publico Headline", 'Playfair Display', serif;
+	font-size: 56px;
+	font-weight: 900;
+	color: #fff;
+	line-height: 1.1;
+	margin-bottom: 20px;
+}
+
+.live-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e31818;
+	color: #fff;
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 10px;
+	font-weight: 900;
+	height: 20px;
+	padding: 0 8px;
+	border-radius: 2px;
+	margin-bottom: 12px;
+	line-height: 1;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.tv-text-col h3 {
+	font-family: "Publico Headline", 'Playfair Display', serif;
+	font-size: 26px;
+	font-weight: 900;
+	color: #fff;
+	margin-bottom: 8px;
+}
+
+.tv-text-col h4 {
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 12px;
+}
+
+.tv-text-col p {
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #eee;
+	line-height: 1.45;
+}
+
+.tv-featured-video img {
+	display: block;
+}
+
+.video-wrapper {
+	position: relative;
+	cursor: pointer;
+}
+
+.play-button-large {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70px;
+	height: 70px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 30px;
+	padding-left: 6px;
+	transition: background-color 0.2s;
+}
+
+.video-wrapper:hover .play-button-large {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tv-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+.tv-card .video-wrapper {
+	margin-bottom: 12px;
+}
+
+.tv-card img {
+	display: block;
+}
+
+.play-button-small {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 45px;
+	height: 45px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 18px;
+	padding-left: 4px;
+	transition: background-color 0.2s;
+}
+
+.video-wrapper:hover .play-button-small {
+	background-color: #000
+}
+
+.tv-card h3 {
+	font-family: "Publico Headline", 'Playfair Display', serif;
+	font-size: 20px;
+	font-weight: 900;
+	color: #fff;
+	line-height: 1.1;
+	margin-bottom: 8px;
+}
+
+.tv-card h3 a:hover {
+	text-decoration: underline;
+	color: #ccc;
+}
+
+.tv-card .meta {
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.tv-card .meta span {
+	color: #ffffff;
 }
 
 /* Responsive Design */
