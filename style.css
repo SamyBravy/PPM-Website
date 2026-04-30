@@ -381,12 +381,6 @@ h6 {
 	align-items: center;
 }
 
-.live-badge::before {
-	content: "• LIVE";
-	color: #d32f2f;
-	margin-right: 8px;
-}
-
 /* Sidebar News Items */
 .sidebar-news {
 	display: flex;
@@ -803,8 +797,8 @@ h6 {
 
 .more-link-inline {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
+	font-size: 15px;
+	font-weight: 600;
 	color: #111;
 }
 
@@ -985,10 +979,10 @@ h6 {
 /* ===== Top Videos ===== */
 .top-videos {
 	background-color: #111;
-	margin-top: 40px;
+	margin-top: 30px;
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
-	padding: 45px calc(50vw - 50%) 55px;
+	padding: 40px calc(50vw - 50%) 45px;
 	color: #fff;
 }
 
@@ -1002,7 +996,8 @@ h6 {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-bottom: 25px;
+	margin-bottom: 45px;
+	gap: 40px;
 }
 
 .tv-text-col {
@@ -1022,6 +1017,55 @@ h6 {
 	margin-bottom: 20px;
 }
 
+.evening-news-header {
+	display: flex;
+	align-items: baseline;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+
+.evening-news-title {
+	font-family: "Publico Headline", 'Playfair Display', serif;
+	font-size: 56px;
+	font-weight: 900;
+	color: #fff;
+	line-height: 1.1;
+	margin-bottom: 0;
+}
+
+.white-more {
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	transition: color 0.1s;
+}
+
+.white-more:hover {
+	color: #ccc;
+}
+
+.top-videos.evening-news {
+	background-color: #020f34;
+	margin-top: 0;
+}
+
+.evening-news .tv-header-row,
+.sixty-minutes .tv-header-row {
+	align-items: flex-start;
+}
+
+.evening-news .tv-featured-video,
+.sixty-minutes .tv-featured-video {
+	margin-top: 0;
+}
+
+.top-videos.sixty-minutes {
+	background-color: #a60a02; /* Dark red */
+	margin-top: 0;
+}
+
 .live-badge {
 	display: inline-flex;
 	align-items: center;
@@ -1029,43 +1073,42 @@ h6 {
 	background-color: #e31818;
 	color: #fff;
 	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
-	font-size: 10px;
-	font-weight: 900;
-	height: 20px;
-	padding: 0 8px;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 3px 8px;
 	border-radius: 2px;
-	margin-bottom: 12px;
-	line-height: 1;
+	margin-bottom: 0px;
+	line-height: 0.8;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 }
 
 .tv-text-col h3 {
 	font-family: "Publico Headline", 'Playfair Display', serif;
-	font-size: 26px;
+	font-size: 32px;
 	font-weight: 900;
 	color: #fff;
-	margin-bottom: 8px;
+	margin-bottom: 6px;
+	margin-top: -10px;
+	cursor: pointer;
 }
 
-.tv-text-col h4 {
-	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	color: #fff;
-	margin-bottom: 12px;
+.tv-text-col h3:hover {
+	text-decoration: underline;
+	color: #e6e6e6;
 }
 
 .tv-text-col p {
 	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: 400;
 	color: #eee;
-	line-height: 1.45;
+	line-height: 1.2;
 }
 
 .tv-featured-video img {
 	display: block;
+	width: 100%;
 }
 
 .video-wrapper {
@@ -1098,7 +1141,7 @@ h6 {
 .tv-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
+	gap: 40px;
 }
 
 .tv-card .video-wrapper {
@@ -1107,6 +1150,7 @@ h6 {
 
 .tv-card img {
 	display: block;
+	width: 100%;
 }
 
 .play-button-small {
@@ -1133,10 +1177,11 @@ h6 {
 
 .tv-card h3 {
 	font-family: "Publico Headline", 'Playfair Display', serif;
-	font-size: 20px;
-	font-weight: 900;
+	font-size: 24px;
+	font-weight: 700;
 	color: #fff;
-	line-height: 1.1;
+	line-height: 1;
+	margin-top: -4px;
 	margin-bottom: 8px;
 }
 
@@ -1145,10 +1190,11 @@ h6 {
 	color: #ccc;
 }
 
-.tv-card .meta {
+.tv-card .meta,
+.tv-text-col .meta {
 	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
 	font-size: 11px;
-	font-weight: 700;
+	font-weight: 400;
 	color: #ffffff;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -1157,7 +1203,123 @@ h6 {
 	gap: 10px;
 }
 
-.tv-card .meta span {
+/* Live Channels Section */
+.live-channels {
+	padding: 40px 0;
+	background-color: #fff;
+}
+
+.live-channels-inner {
+	max-width: 1900px;
+	margin: 0 auto;
+	padding: 0 0px;
+}
+
+.lc-header {
+	display: flex;
+	align-items: stretch;
+	margin-bottom: 24px;
+}
+
+.lc-tab-red {
+	background-color: #cc0000;
+	color: #fff;
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 1px;
+	padding: 12px 16px;
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+.lc-dot {
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin-right: 8px;
+}
+
+.lc-tab-white {
+	background-color: #fff;
+	color: #000;
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	padding: 12px 16px;
+	border: 1px solid #ccc;
+	border-left: none;
+	display: flex;
+	align-items: center;
+	border-radius: 0 4px 4px 0;
+	text-decoration: none;
+}
+
+.lc-tab-white:hover .lc-tab-text {
+	text-decoration: underline;
+	color: #00000089;
+}
+
+.lc-tab-white:hover .lc-tab-arrow {
+	color: #00000089;
+}
+
+.lc-tab-arrow {
+	margin-left: 6px;
+	font-size: 18px;
+	line-height: 1;
+	transition: color 0.2s;
+}
+
+.lc-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 32px;
+}
+
+.lc-card {
+	background-color: #0b72c9;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	min-height: 80px;
+	padding: 10px 12px;
+	cursor: pointer;
+}
+
+.lc-card:hover .lc-card-text span {
+	text-decoration: underline;
+	color: #ffffffd4;
+}
+
+.lc-card-logo {
+	flex-shrink: 0;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
+	margin-right: 25px;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.lc-card-logo img {
+	max-width: 50px;
+	height: auto;
+}
+
+.lc-card-text {
+	color: #fff;
+	font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 1.15;
+}
+
+.tv-card .meta span,
+.tv-text-col .meta span {
 	color: #ffffff;
 }
 
