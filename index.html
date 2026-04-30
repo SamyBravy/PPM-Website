@@ -8,14 +8,14 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;700&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Playfair+Display:wght@700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 		rel="stylesheet">
 </head>
 
 <body>
-	<header class="main-header">
-		<div class="header-top">
-			<div class="header-top-inner">
+	<!-- Primary nav: sticky bar, stays at top on scroll -->
+	<div class="header-top">
+		<div class="header-top-inner">
 			<nav class="primary-nav">
 				<ul>
 					<li>
@@ -70,8 +70,7 @@
 				<svg viewBox="0 0 230 32" width="160" height="22">
 					<path fill="currentColor"
 						d="M30.7,16A14.7,14.7,0,1,0,16,30.7,14.7,14.7,0,0,0,30.7,16Zm-24.5,0A9.8,9.8,0,1,1,16,25.8,9.8,9.8,0,0,1,6.2,16ZM16,21.5A5.5,5.5,0,1,0,10.5,16,5.5,5.5,0,0,0,16,21.5Z" />
-					<text x="38" y="24" font-family="Arial" font-weight="900" font-size="24" letter-spacing="-0.5">CBS
-						NEWS</text>
+					<text x="38" y="24" font-family="Arial" font-weight="900" font-size="24" letter-spacing="-0.5">CBS NEWS</text>
 				</svg>
 			</div>
 			<div class="search-icon">
@@ -81,95 +80,302 @@
 					<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
 				</svg>
 			</div>
-			</div><!-- end header-top-inner -->
 		</div>
-		<div class="header-bottom">
-			<nav class="secondary-nav">
-				<ul>
-					<li><a href="#">U.S.</a></li>
-					<li><a href="#">Iran War</a></li>
-					<li><a href="#">Royal Visit</a></li>
-					<li><a href="#">World</a></li>
-					<li><a href="#">Politics</a></li>
-					<li><a href="#">HealthWatch</a></li>
-					<li><a href="#">MoneyWatch</a></li>
-					<li><a href="#">Entertainment</a></li>
-					<li><a href="#">Crime</a></li>
-					<li><a href="#">Sports</a></li>
-					<li><a href="#">The Free Press</a></li>
-				</ul>
-			</nav>
-		</div>
+	</div>
+
+	<!-- Secondary nav: scrolls away normally -->
+	<header class="main-header">
+		<nav class="secondary-nav">
+			<ul>
+				<li><a href="#">U.S.</a></li>
+				<li><a href="#">Iran War</a></li>
+				<li><a href="#">Royal Visit</a></li>
+				<li><a href="#">World</a></li>
+				<li><a href="#">Politics</a></li>
+				<li><a href="#">HealthWatch</a></li>
+				<li><a href="#">MoneyWatch</a></li>
+				<li><a href="#">Entertainment</a></li>
+				<li><a href="#">Crime</a></li>
+				<li><a href="#">Sports</a></li>
+				<li><a href="#">The Free Press</a></li>
+			</ul>
+		</nav>
 	</header>
 
-	<main class="main-container">
-		<section class="hero-section">
-			<div class="hero-content">
-				<div class="hero-text">
-					<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore</h1>
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat.</p>
-					<span class="meta">UPDATED 0M AGO</span>
+	<main class="mega-container">
+		<div class="main-container">
+			<section class="hero-section">
+				<div class="hero-content">
+					<div class="hero-text">
+						<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.</p>
+						<span class="meta">UPDATED 0M AGO</span>
+					</div>
+					<div class="hero-image">
+						<!-- Placeholder image -->
+						<img src="https://placehold.co/640x440" alt="Placeholder Hero Image">
+					</div>
 				</div>
-				<div class="hero-image">
-					<!-- Placeholder image -->
-					<img src="https://placehold.co/800x450" alt="Placeholder Hero Image">
-				</div>
-			</div>
 
-			<div class="hero-thumbnails">
-				<div class="thumb">
-					<img src="https://placehold.co/400x266" alt="Placeholder Thumbnail 1">
-					<span class="tag live-tag">LIVE</span>
-					<h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</h2>
-					<span class="meta">UPDATED 3M AGO</span>
+				<div class="hero-thumbnails">
+					<div class="thumb">
+						<img src="https://placehold.co/300x169" alt="Placeholder Thumbnail 1">
+						<span class="tag live-tag">LIVE</span>
+						<h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</h2>
+						<span class="meta">UPDATED 3M AGO</span>
+					</div>
+					<div class="thumb">
+						<img src="https://placehold.co/300x169" alt="Placeholder Thumbnail 2">
+						<h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h2>
+						<span class="meta">25M AGO</span>
+					</div>
 				</div>
-				<div class="thumb">
-					<img src="https://placehold.co/400x266" alt="Placeholder Thumbnail 2">
-					<h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h2>
-					<span class="meta">25M AGO</span>
+			</section>
+
+			<aside class="sidebar">
+				<div class="sidebar-video">
+					<div class="video-thumbnail">
+						<img src="https://placehold.co/400x225" alt="Placeholder Video Thumbnail">
+					</div>
+				</div>
+				<div class="sidebar-news">
+					<article class="news-item">
+						<h2>Duis aute irure dolor in reprehenderit in voluptate</h2>
+						<span class="meta">UPDATED 12M AGO</span>
+					</article>
+					<article class="news-item">
+						<h2>Excepteur sint occaecat cupidatat non proident</h2>
+						<span class="meta">1H AGO</span>
+					</article>
+					<article class="news-item">
+						<span class="tag">INVESTIGATION</span>
+						<h2>Sed ut perspiciatis unde omnis iste natus error</h2>
+						<span class="meta">UPDATED 33M AGO</span>
+					</article>
+					<article class="news-item">
+						<h2>Nemo enim ipsam voluptatem quia voluptas sit</h2>
+						<span class="meta">11H AGO</span>
+					</article>
+					<article class="news-item">
+						<h2>Neque porro quisquam est qui dolorem ipsum</h2>
+						<span class="meta">12H AGO</span>
+					</article>
+					<article class="news-item">
+						<h2>At vero eos et accusamus et iusto odio</h2>
+						<span class="meta">5H AGO</span>
+					</article>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Topic Cluster Section -->
+		<section class="topic-cluster">
+			<div class="topic-cluster-inner">
+				<div class="topic-header">
+					<h2 class="topic-title">Lorem Ipsum Dolor</h2>
+					<a href="#" class="topic-more">More ›</a>
+				</div>
+				<div class="topic-grid">
+					<article class="topic-card">
+						<div class="topic-card-text">
+							<h3><a href="#">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</a></h3>
+							<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores...</p>
+							<span class="meta">17H AGO</span>
+						</div>
+						<div class="topic-card-image">
+							<img src="https://placehold.co/150x150" alt="Placeholder">
+						</div>
+					</article>
+					<article class="topic-card">
+						<div class="topic-card-text">
+							<h3><a href="#">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</a></h3>
+							<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates...</p>
+							<span class="meta">UPDATED 4M AGO</span>
+						</div>
+						<div class="topic-card-image">
+							<img src="https://placehold.co/150x150" alt="Placeholder">
+						</div>
+					</article>
+					<article class="topic-card">
+						<div class="topic-card-text">
+							<h3><a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit</a></h3>
+							<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi...</p>
+							<span class="meta">APR 28</span>
+						</div>
+						<div class="topic-card-image">
+							<img src="https://placehold.co/150x150" alt="Placeholder">
+						</div>
+					</article>
 				</div>
 			</div>
 		</section>
 
-		<aside class="sidebar">
-			<div class="sidebar-video">
-				<div class="video-thumbnail">
-					<img src="https://placehold.co/400x225" alt="Placeholder Video Thumbnail">
-					<div class="video-overlay">
-						<span class="live-badge">CBS NEWS 24/7</span>
+		<!-- More Top Stories Section -->
+		<section class="more-stories">
+			<div class="more-stories-inner">
+				<h2 class="section-title">More Top Stories</h2>
+
+				<!-- Single grid: left content spans 2 rows, sidebar spans full height -->
+				<div class="mts-grid">
+					<!-- Row 1 left: text + image -->
+					<div class="mts-featured-text">
+						<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</a></h3>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, during this week's visit.</p>
+						<span class="meta">4H AGO</span>
+						<a href="#" class="mts-sublink">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</a>
+					</div>
+					<div class="mts-featured-image">
+						<img src="https://placehold.co/640x440" alt="Placeholder">
+					</div>
+
+					<!-- Row 2 left: 2 article cards -->
+					<div class="mts-cards">
+						<article class="mts-card">
+							<img src="https://placehold.co/300x169" alt="Placeholder">
+							<span class="tag mts-tag">EXCLUSIVE</span>
+							<h3><a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse</a></h3>
+							<span class="meta">5H AGO</span>
+						</article>
+						<article class="mts-card">
+							<img src="https://placehold.co/300x169" alt="Placeholder">
+							<h3><a href="#">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus</a></h3>
+							<span class="meta">2H AGO</span>
+						</article>
+					</div>
+
+					<!-- Sidebar: all 6 articles, no separation -->
+					<div class="mts-sidebar">
+						<article class="mts-sidebar-item">
+							<div class="mts-sidebar-text">
+								<h4><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia</a></h4>
+								<span class="meta">45M AGO</span>
+							</div>
+							<div class="mts-sidebar-img">
+								<img src="https://placehold.co/90x90" alt="Placeholder">
+							</div>
+						</article>
+						<article class="mts-sidebar-item">
+							<div class="mts-sidebar-text">
+								<h4><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</a></h4>
+								<span class="meta">1H AGO</span>
+							</div>
+							<div class="mts-sidebar-img">
+								<img src="https://placehold.co/90x90" alt="Placeholder">
+							</div>
+						</article>
+						<article class="mts-sidebar-item">
+							<div class="mts-sidebar-text">
+								<h4><a href="#">Nemo enim ipsam voluptatem quia voluptas sit</a></h4>
+								<span class="meta">7H AGO</span>
+							</div>
+							<div class="mts-sidebar-img">
+								<img src="https://placehold.co/90x90" alt="Placeholder">
+							</div>
+						</article>
+						<article class="mts-sidebar-item">
+							<div class="mts-sidebar-text">
+								<h4><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur</a></h4>
+								<span class="meta">9H AGO</span>
+							</div>
+							<div class="mts-sidebar-img">
+								<img src="https://placehold.co/90x90" alt="Placeholder">
+							</div>
+						</article>
+						<article class="mts-sidebar-item">
+							<div class="mts-sidebar-text">
+								<h4><a href="#">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</a></h4>
+								<span class="meta">9H AGO</span>
+							</div>
+							<div class="mts-sidebar-img">
+								<img src="https://placehold.co/90x90" alt="Placeholder">
+							</div>
+						</article>
+						<article class="mts-sidebar-item">
+							<div class="mts-sidebar-text">
+								<h4><a href="#">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</a></h4>
+								<span class="meta">18H AGO</span>
+							</div>
+							<div class="mts-sidebar-img">
+								<img src="https://placehold.co/90x90" alt="Placeholder">
+							</div>
+						</article>
 					</div>
 				</div>
 			</div>
-			<div class="sidebar-news">
-				<article class="news-item">
-					<h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur</h2>
-					<span class="meta">UPDATED 12M AGO</span>
+		</section>
+
+		<!-- Go Deeper Banner -->
+		<section class="go-deeper">
+			<div class="go-deeper-inner">
+				<h2>Go Deeper With The Free Press</h2>
+				<div class="go-deeper-grid">
+					<article class="go-deeper-card">
+						<img src="https://placehold.co/413x232" alt="Placeholder">
+						<span class="go-deeper-label">☰FREEPRESS</span>
+						<h3>Lorem ipsum dolor sit amet consectetur adipiscing elit?</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</p>
+						<span class="go-deeper-date">APR 28</span>
+					</article>
+					<article class="go-deeper-card">
+						<img src="https://placehold.co/413x232" alt="Placeholder">
+						<span class="go-deeper-label">☰FREEPRESS</span>
+						<h3>Quis autem vel eum iure reprehenderit qui in ea voluptate?</h3>
+						<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi...</p>
+						<span class="go-deeper-date">APR 29</span>
+					</article>
+					<article class="go-deeper-card">
+						<img src="https://placehold.co/413x232" alt="Placeholder">
+						<span class="go-deeper-label">☰FREEPRESS</span>
+						<h3>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</h3>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+						<span class="go-deeper-date">APR 28</span>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- The Week in Politics -->
+		<section class="week-politics">
+			<div class="week-politics-header">
+				<h2 class="section-title">The Week in Politics</h2>
+				<a href="#" class="more-link-inline">More ›</a>
+			</div>
+
+			<div class="week-politics-top">
+				<div class="wp-featured-text">
+					<h3><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod</a></h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<span class="meta">4H AGO</span>
+				</div>
+				<div class="wp-featured-image">
+					<img src="https://placehold.co/560x380" alt="Placeholder">
+				</div>
+				<div class="wp-sidebar-card">
+					<img src="https://placehold.co/300x169" alt="Placeholder">
+					<h3><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse</a></h3>
+					<span class="meta">9H AGO</span>
+				</div>
+			</div>
+
+			<div class="wp-bottom-cards">
+				<article class="wp-card">
+					<img src="https://placehold.co/300x169" alt="Placeholder">
+					<h3><a href="#">Sed ut perspiciatis unde omnis iste natus error</a></h3>
+					<span class="meta">UPDATED 50M AGO</span>
 				</article>
-				<article class="news-item">
-					<h2>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-						id est laborum</h2>
+				<article class="wp-card">
+					<img src="https://placehold.co/300x169" alt="Placeholder">
+					<h3><a href="#">At vero eos et accusamus et iusto odio dignissimos ducimus</a></h3>
+					<span class="meta">2H AGO</span>
+				</article>
+				<article class="wp-card">
+					<img src="https://placehold.co/300x169" alt="Placeholder">
+					<h3><a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit</a></h3>
 					<span class="meta">1H AGO</span>
 				</article>
-				<article class="news-item">
-					<span class="tag">INVESTIGATION</span>
-					<h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
-					</h2>
-					<span class="meta">UPDATED 33M AGO</span>
-				</article>
-				<article class="news-item">
-					<h2>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur
-						magni</h2>
-					<span class="meta">11H AGO</span>
-				</article>
-				<article class="news-item">
-					<h2>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</h2>
-					<span class="meta">12H AGO</span>
-				</article>
 			</div>
-		</aside>
+		</section>
 	</main>
 	<script src="script.js"></script>
 </body>
