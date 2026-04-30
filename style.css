@@ -691,6 +691,10 @@ ul {
 	cursor: pointer;
 }
 
+.news-item img {
+	display: none;
+}
+
 .news-item:first-child {
 	border-top: none;
 	padding-top: 0;
@@ -1831,6 +1835,769 @@ ul {
 	.footer-copyright {
 		margin-top: 10px;
 		margin-left: 20px;
+	}
+}
+
+@media (max-width: 576px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	/* ─── HEADER ─────────────────────────────── */
+	.header-top-inner {
+		padding: 10px 16px;
+		gap: 0;
+	}
+
+	/* Hide desktop primary nav */
+	.primary-nav {
+		display: none;
+	}
+
+	/* Show hamburger (9-dot grid icon) */
+	.hamburger-btn {
+		display: grid;
+		grid-template-columns: repeat(3, 5px);
+		grid-template-rows: repeat(3, 5px);
+		gap: 3px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 4px;
+		flex-shrink: 0;
+	}
+
+	.hamburger-btn span {
+		display: block;
+		width: 5px;
+		height: 5px;
+		background: #111;
+		border-radius: 50%;
+	}
+
+	/* Logo stays centered */
+	.logo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	/* Hide secondary nav (topic pills) */
+	.main-header {
+		display: none;
+	}
+
+	/* ─── MEGA CONTAINER ─────────────────────── */
+	.mega-container {
+		padding: 0 16px;
+		overflow-x: hidden;
+	}
+
+	/* ─── MAIN CONTAINER ─────────────────────── */
+	.main-container {
+		grid-template-columns: 1fr;
+		gap: 0;
+		margin-top: 16px;
+	}
+
+	/* ─── HERO CONTENT ───────────────────────── */
+	.hero-section {
+		display: contents;
+	}
+
+	.sidebar {
+		display: contents;
+	}
+
+	.hero-content {
+		order: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		margin-bottom: 0;
+	}
+
+	.sidebar-video {
+		order: 2;
+	}
+
+	.hero-thumbnails {
+		order: 3;
+	}
+
+	.sidebar-news {
+		order: 4;
+	}
+
+	/* Image comes first */
+	.hero-image {
+		order: 1;
+		grid-column: unset;
+		width: 100%;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 535 / 301;
+		object-fit: cover;
+		display: block;
+	}
+
+	/* Text comes second */
+	.hero-text {
+		order: 2;
+		grid-column: unset;
+		padding: 12px 0 16px;
+	}
+
+	.hero-text h1 {
+		font-size: 17px;
+		font-weight: 700;
+		line-height: 1.1;
+		margin-bottom: 8px;
+		cursor: pointer;
+	}
+
+	.hero-text h1:hover {
+		color: #5f5f5f;
+		text-decoration: underline;
+	}
+
+	.hero-text p {
+		display: none;
+	}
+
+	.hero-text .meta {
+		color: #333;
+	}
+
+	/* ─── HERO THUMBNAILS ─────────────────────── */
+	.hero-thumbnails {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+
+	.thumb {
+		display: grid;
+		grid-template-columns: 1fr 90px;
+		gap: 0 12px;
+		padding: 8px 0;
+	}
+
+	.thumb img {
+		grid-column: 2;
+		grid-row: 1 / 5;
+		width: 90px;
+		height: 90px;
+		object-fit: cover;
+		align-self: start;
+	}
+
+	.thumb .live-tag,
+	.thumb .tag {
+		grid-column: 1;
+		width: fit-content;
+		margin-top: 0;
+	}
+
+	.thumb h2 {
+		grid-column: 1;
+		font-size: 17px;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-top: 0;
+		cursor: pointer;
+	}
+
+	.thumb h2:hover {
+		color: #5f5f5f;
+		text-decoration: underline;
+	}
+
+	.thumb .meta {
+		grid-column: 1;
+		margin-top: 2px;
+		color: #333;
+	}
+
+	/* ─── SIDEBAR ─────────────────────────────── */
+	.sidebar {
+		gap: 0;
+	}
+
+	.sidebar-video {
+		width: 100%;
+		margin: 16px 0;
+	}
+
+	.sidebar-video img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 535 / 301;
+		object-fit: cover;
+		display: block;
+	}
+
+	.news-item {
+		display: grid;
+		grid-template-columns: 1fr 90px;
+		gap: 0 12px;
+		padding: 8px 0;
+	}
+
+	.news-item:first-child {
+		padding-top: 8px;
+	}
+
+	.news-item img {
+		display: block;
+		grid-column: 2;
+		grid-row: 1 / 5;
+		width: 90px;
+		height: 90px;
+		object-fit: cover;
+		align-self: start;
+	}
+
+	.news-item .tag {
+		display: none;
+	}
+
+	.news-item h2 {
+		grid-column: 1;
+		font-size: 17px;
+		font-weight: 700;
+		line-height: 1.25;
+		cursor: pointer;
+	}
+
+	.news-item h2:hover {
+		color: #5f5f5f;
+		text-decoration: underline;
+	}
+
+	.news-item .meta {
+		grid-column: 1;
+		margin-top: 2px;
+		color: #333;
+	}
+
+	/* ─── TOPIC CLUSTER ──────────────────────── */
+	.topic-cluster .meta,
+	.more-stories .meta,
+	.week-politics .meta {
+		color: #000;
+	}
+
+	.topic-cluster {
+		margin-top: 20px;
+		padding-top: 20px;
+	}
+
+	.topic-cluster-inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.topic-header {
+		display: contents;
+	}
+
+	.topic-title {
+		order: 1;
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+	.topic-grid {
+		order: 2;
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.topic-more {
+		order: 3;
+		display: block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		padding: 14px 0;
+		text-align: center;
+		margin-top: 24px;
+		width: 100%;
+		font-size: 16px;
+		transition: background-color 0.2s ease;
+	}
+
+	.topic-more:hover {
+		background-color: rgba(210, 210, 210, 0.5);
+		text-decoration: none;
+	}
+
+	.topic-card-text h3 {
+		font-family: "Publico Headline", 'PT Serif', serif;
+		font-size: 18px;
+	}
+
+	.topic-card-text p {
+		display: none;
+	}
+
+	.topic-card-image {
+		flex: 0 0 90px;
+	}
+
+	/* ─── MORE TOP STORIES ───────────────────── */
+	.more-stories {
+		margin-top: 20px;
+		padding-top: 2px;
+		padding-bottom: 10px;
+	}
+
+	.more-stories .section-title {
+		font-size: 24px;
+	}
+
+	.section-title {
+		font-size: 28px;
+		margin-bottom: 16px;
+	}
+
+	.mts-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	/* Featured image first */
+	.mts-featured-image {
+		order: 1;
+		grid-column: unset;
+		grid-row: unset;
+		width: 100%;
+	}
+
+	.mts-featured-image img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 535 / 301;
+		object-fit: cover;
+		display: block;
+	}
+
+	/* Featured text second */
+	.mts-featured-text {
+		order: 2;
+		grid-column: unset;
+		grid-row: unset;
+		padding: 12px 0 8px;
+		padding-right: 0;
+	}
+
+	.mts-featured-text h3 {
+		font-family: "Publico Headline", 'PT Serif', serif;
+		font-size: 17px;
+		margin-bottom: 5px;
+	}
+
+	.mts-featured-text p {
+		display: none;
+	}
+
+	/* Cards third */
+	.mts-cards {
+		order: 3;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		grid-column: unset;
+		grid-row: unset;
+		justify-content: unset;
+		margin-top: 0;
+	}
+
+	.mts-card {
+		display: grid;
+		grid-template-columns: 1fr 90px;
+		gap: 0 12px;
+		max-width: 100%;
+		padding: 8px 0;
+	}
+
+	.mts-card img {
+		grid-column: 2;
+		grid-row: 1 / 5;
+		width: 90px;
+		height: 90px;
+		object-fit: cover;
+		align-self: start;
+	}
+
+	.mts-tag {
+		display: none;
+	}
+
+	.mts-card h3 {
+		grid-column: 1;
+		font-family: "Publico Headline", 'PT Serif', serif;
+		font-size: 17px;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	.mts-card .meta {
+		grid-column: 1;
+		margin-top: 0;
+	}
+
+	/* Sidebar items last */
+	.mts-sidebar {
+		order: 4;
+		grid-column: unset;
+		grid-row: unset;
+	}
+
+	.mts-sidebar-item {
+		padding: 8px 0;
+	}
+
+	.mts-sidebar-item:first-child {
+		padding-top: 8px;
+	}
+
+	.mts-sidebar-text h4 {
+		font-family: "Publico Headline", 'PT Serif', serif;
+		font-size: 17px;
+	}
+
+	.mts-sidebar-img {
+		flex: 0 0 90px;
+	}
+
+	/* ─── GO DEEPER ──────────────────────────── */
+	/* calc(-50vw + 50%) already handles full-bleed with 16px container padding */
+	.go-deeper {
+		margin-top: 12px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.go-deeper h2 {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	.go-deeper-grid {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.go-deeper-card h3 {
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+	.go-deeper-card p {
+		display: none;
+	}
+
+	/* ─── WEEK IN POLITICS / MONEYWATCH ─────── */
+	.week-politics {
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.week-politics-header {
+		display: contents;
+	}
+
+	.week-politics-header .section-title {
+		order: 1;
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	.week-politics-top {
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		margin-bottom: 0;
+	}
+
+	.wp-featured-image {
+		order: 1;
+		width: 100%;
+	}
+
+	.wp-featured-image img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 535 / 301;
+		object-fit: cover;
+		display: block;
+	}
+
+	.wp-featured-text {
+		order: 2;
+		padding: 12px 0 8px;
+	}
+
+	.wp-featured-text h3 {
+		font-family: "Publico Headline", 'PT Serif', serif;
+		font-size: 17px;
+		margin-bottom: 5px;
+	}
+
+	.wp-featured-text p {
+		display: none;
+	}
+
+	.wp-sidebar-card {
+		order: 3;
+	}
+
+	.wp-bottom-cards {
+		order: 4;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.wp-sidebar-card,
+	.wp-card {
+		display: grid;
+		grid-template-columns: 1fr 90px;
+		gap: 0 12px;
+		max-width: 100%;
+		padding: 8px 0;
+	}
+
+	.wp-sidebar-card img,
+	.wp-card img {
+		grid-column: 2;
+		grid-row: 1 / 5;
+		width: 90px;
+		height: 90px;
+		object-fit: cover;
+		align-self: start;
+	}
+
+	.wp-sidebar-card h3,
+	.wp-card h3 {
+		grid-column: 1;
+		font-family: "Publico Headline", 'PT Serif', serif;
+		font-size: 17px;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	.wp-sidebar-card .meta,
+	.wp-card .meta {
+		grid-column: 1;
+		margin-top: 0;
+	}
+
+	.week-politics-header .more-link-inline {
+		order: 5;
+		display: block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		padding: 14px 0;
+		text-align: center;
+		margin-top: 16px;
+		width: 100%;
+		font-size: 16px;
+		font-weight: 700;
+		color: #111;
+		text-decoration: none;
+		margin-bottom: -16px;
+	}
+
+	.week-politics-header .more-link-inline:hover {
+		background-color: rgba(210, 210, 210, 0.5);
+	}
+
+	/* ─── MANAGING YOUR MONEY ────────────────── */
+	.managing-money {
+		padding-top: 16px;
+		padding-bottom: 40px;
+	}
+
+	.managing-money-inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.managing-money-header {
+		display: contents;
+	}
+
+	.managing-money-header h2 {
+		order: 1;
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	.managing-money-grid {
+		order: 2;
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.mm-card img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 535 / 301;
+		object-fit: cover;
+		display: block;
+	}
+
+	.mm-card h3 {
+		font-size: 17px;
+		margin-bottom: 5px;
+	}
+
+	.mm-card p {
+		display: none;
+	}
+
+	.managing-money-header .more-link-inline {
+		order: 3;
+		display: block;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		padding: 14px 0;
+		text-align: center;
+		margin-top: 24px;
+		width: 100%;
+		font-size: 16px;
+		font-weight: 700;
+		color: #fff;
+		text-decoration: none;
+		margin-bottom: -16px;
+	}
+
+	.managing-money-header .more-link-inline:hover {
+		background-color: rgb(255, 255, 255);
+		color: #000;
+		text-decoration: none;
+	}
+
+	/* ─── TOP VIDEOS ─────────────────────────── */
+	.top-videos {
+		padding-top: 30px;
+		padding-bottom: 35px;
+	}
+
+	.tv-header-row {
+		flex-direction: column;
+		gap: 0;
+		margin-bottom: 24px;
+	}
+
+	/* Featured video comes first */
+	.tv-featured-video {
+		order: 1;
+		margin-top: 0;
+		width: 100%;
+	}
+
+	.tv-featured-video img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 535 / 301;
+		object-fit: cover;
+		display: block;
+	}
+
+	/* Text col comes second */
+	.tv-text-col {
+		order: 2;
+		width: 100%;
+		padding-top: 14px;
+	}
+
+	.tv-text-col h2 {
+		font-size: 28px;
+		margin-bottom: 12px;
+	}
+
+	.tv-text-col h3 {
+		font-size: 22px;
+		margin-top: 4px;
+	}
+
+	.tv-text-col p {
+		font-size: 15px;
+	}
+
+	.tv-grid {
+		display: flex;
+		flex-direction: row;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		gap: 16px;
+		padding-bottom: 12px;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+	}
+
+	.tv-grid::-webkit-scrollbar {
+		display: none;
+	}
+
+	.tv-card {
+		flex: 0 0 72%;
+		scroll-snap-align: start;
+	}
+
+	.tv-card h3 {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	/* ─── LIVE CHANNELS ──────────────────────── */
+	.live-channels {
+		padding: 24px 0;
+	}
+
+	.live-channels-inner {
+		padding: 0 16px;
+		max-width: 100%;
+	}
+
+	.lc-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+	}
+
+	.lc-card {
+		min-height: 70px;
+		padding: 8px 10px;
+	}
+
+	.lc-card-logo {
+		padding-right: 10px;
+		padding-left: 10px;
+		margin-right: 12px;
+	}
+
+	.lc-card-text {
+		font-size: 11px;
+	}
+
+	/* ─── CBS EVENING NEWS / 60 MINUTES ─────── */
+	.evening-news-title {
+		font-size: 28px;
+	}
+
+	.evening-news-header {
+		margin-bottom: 16px;
 	}
 }
 
