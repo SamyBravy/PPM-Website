@@ -1856,8 +1856,22 @@ ul {
 
 /* TABLET LAYOUT */
 @media (min-width: 768px) and (max-width: 1019px) {
-	html, body {
+
+	html,
+	body {
 		overflow-x: hidden;
+	}
+
+	/* Mobile Section Divider */
+	.mobile-section-divider {
+		grid-column: 1 / -1;
+		width: 100vw;
+		margin-left: calc(-50vw + 50%);
+		border: 0;
+		border-top: 1px solid #e8e8e8;
+		margin-top: 32px;
+		margin-bottom: 16px;
+		display: block;
 	}
 
 	/* Center logo */
@@ -1872,6 +1886,33 @@ ul {
 		z-index: 9;
 	}
 
+	.popup-content-0 {
+		margin-bottom: 30px;
+	}
+
+	.popup-content-1 {
+		margin-bottom: -15px;
+	}
+
+	.burger-menu {
+		margin-left: -20px !important;
+	}
+
+	.under-header-navs ul {
+		padding-left: 5px !important;
+		margin-left: 0 !important;
+	}
+
+	.under-header-item:first-child {
+		margin-left: 8px !important;
+	}
+
+	.under-header-item a {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 16px !important;
+		font-weight: 400 !important;
+	}
+
 	.main-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -1880,7 +1921,8 @@ ul {
 	}
 
 	/* All timestamps: black, 11px, Proxima Nova 400 */
-	.meta, .meta * {
+	.meta,
+	.meta * {
 		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
 		font-size: 11px !important;
 		font-weight: 400 !important;
@@ -1888,8 +1930,35 @@ ul {
 		margin-top: 4px;
 	}
 
+	/* Force "More ›" on tablet for all more-links except the special Dish one */
+	.more-link-inline:not(.dish-more) {
+		font-size: 0 !important;
+	}
+
+	.more-link-inline:not(.dish-more)::after {
+		content: "More ›";
+		font-size: 15px !important;
+		/* Restore original font size */
+	}
+
+	.more-link-inline:not(.dish-more):hover::after {
+		text-decoration: underline;
+	}
+
 	/* All titles for tablet version: 17px, 700 weight, Publico Headline */
-	.main-container h1, .main-container h2, .main-container h3, .main-container h4, .main-container h5, .main-container h6 {
+	.main-container h1,
+	.main-container h2,
+	.main-container h3,
+	.main-container h4,
+	.main-container h5,
+	.main-container h6,
+	.more-stories h3,
+	.more-stories h4,
+	.topic-cluster h3,
+	.go-deeper h3,
+	.week-politics h3,
+	.managing-money h3,
+	.news-categories h3 {
 		font-family: 'Publico Headline', 'Playfair Display', serif !important;
 		font-size: 17px !important;
 		font-weight: 700 !important;
@@ -1910,6 +1979,7 @@ ul {
 		grid-column: 1;
 		grid-row: 1 / 3;
 	}
+
 	.hero-image img {
 		width: 100%;
 		height: auto;
@@ -1923,9 +1993,11 @@ ul {
 		grid-row: 3;
 		padding: 4px 0 20px;
 	}
+
 	.hero-text h1 {
 		margin-bottom: 2px;
 	}
+
 	.hero-text p {
 		display: none;
 	}
@@ -1937,14 +2009,17 @@ ul {
 		padding: 0;
 		align-self: start;
 	}
+
 	.thumb h2 {
 		margin-top: 4px;
 		margin-bottom: 2px;
 	}
+
 	/* Second thumb aligns with hero text */
 	.thumb:nth-child(2) {
 		grid-row: 3;
 	}
+
 	.thumb img {
 		display: none;
 	}
@@ -1955,6 +2030,7 @@ ul {
 		grid-row: 4 / 7;
 		margin-top: 18px;
 	}
+
 	.sidebar-video img {
 		width: 100%;
 		height: auto;
@@ -1968,18 +2044,31 @@ ul {
 		padding: 10px 0;
 		border-top: none;
 	}
+
 	.news-item h2 {
 		margin-bottom: 2px;
 	}
+
 	.news-item img {
 		display: none;
 	}
 
 	/* Place first 4 news items in rows 4-7, column 2 */
-	.sidebar-news article:nth-child(1) { grid-row: 4; }
-	.sidebar-news article:nth-child(2) { grid-row: 5; }
-	.sidebar-news article:nth-child(3) { grid-row: 6; }
-	.sidebar-news article:nth-child(4) { grid-row: 7; }
+	.sidebar-news article:nth-child(1) {
+		grid-row: 4;
+	}
+
+	.sidebar-news article:nth-child(2) {
+		grid-row: 5;
+	}
+
+	.sidebar-news article:nth-child(3) {
+		grid-row: 6;
+	}
+
+	.sidebar-news article:nth-child(4) {
+		grid-row: 7;
+	}
 
 	/* Remaining news items (5th, 6th) overflow to left column */
 	.sidebar-news article:nth-child(n+5) {
@@ -1990,9 +2079,11 @@ ul {
 	.topic-grid {
 		gap: 20px;
 	}
+
 	.topic-card-text p {
 		display: none;
 	}
+
 	.topic-card-text h3 {
 		font-family: 'Publico Headline', 'Playfair Display', serif !important;
 		font-size: 17px !important;
@@ -2000,24 +2091,562 @@ ul {
 		line-height: 1.2 !important;
 		margin-bottom: 2px;
 	}
+
 	.topic-card-image {
-		flex: 0 0 100px;
+		flex: 0 0 90px;
 	}
+
 	/* Section Titles for Tablet */
 	.topic-header {
 		margin-bottom: 10px !important;
 	}
-	.topic-title, .section-title {
+
+	.topic-title,
+	.section-title,
+	.go-deeper h2,
+	.week-politics h2,
+	.managing-money h2,
+	.top-videos h2 {
 		font-family: 'Publico Headline', 'Playfair Display', serif !important;
 		font-size: 32px !important;
 		font-weight: 900 !important;
-		margin-bottom: 8px !important;
+		margin-bottom: 12px !important;
 	}
 
 	/* Spacing for horizontal lines */
-	.topic-cluster, .more-stories {
+	.topic-cluster,
+	.more-stories {
+		margin-top: 10px !important;
+		padding-top: 5px !important;
+	}
+
+	.more-stories {
+		padding-bottom: 0 !important;
+	}
+
+	.section-title {
+		margin-bottom: 16px !important;
+	}
+
+	/* ===== More Top Stories Tablet Layout ===== */
+	.mts-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		column-gap: 24px;
+		row-gap: 0;
+	}
+
+	/* Featured block: image left, text right */
+	.mts-block {
+		display: contents !important;
+	}
+
+	.mts-featured-image {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.mts-featured-image img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 354 / 199;
+		object-fit: cover;
+	}
+
+	.mts-featured-text {
+		grid-column: 1;
+		grid-row: 2;
+		padding: 2px 0 0 0;
+	}
+
+	.mts-featured-text h3 {
+		margin-bottom: 4px !important;
+	}
+
+	.mts-featured-text p {
+		display: none;
+	}
+
+	/* Cards: stacked in right column and stretched to align with left column */
+	.mts-cards {
+		grid-column: 2;
+		grid-row: 1 / 3;
+		display: flex !important;
+		flex-direction: column;
+		justify-content: space-between;
+		align-self: stretch;
+	}
+
+	.mts-card {
+		max-width: 100% !important;
+		display: grid;
+		grid-template-columns: 1fr 90px;
+		gap: 0 12px;
+	}
+
+	.mts-card img {
+		grid-column: 2;
+		grid-row: 1 / 4;
+		width: 90px !important;
+		height: 90px !important;
+		object-fit: cover;
+	}
+
+	.mts-card .tag,
+	.mts-card h3,
+	.mts-card .meta {
+		grid-column: 1;
+	}
+
+	.mts-card h3 {
+		margin-top: 0;
+		margin-bottom: 2px;
+	}
+
+	/* Sidebar: 2 columns, 3 rows */
+	.mts-sidebar {
+		grid-column: 1 / 3;
+		grid-row: 3;
+		display: grid !important;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 24px;
+		row-gap: 1px;
+		align-items: start;
+		margin-top: 16px;
+	}
+
+	.mts-sidebar-item {
+		padding: 8px 0;
+		border: none;
+	}
+
+	.mts-sidebar-item:nth-child(1),
+	.mts-sidebar-item:nth-child(2) {
+		padding-top: 0 !important;
+	}
+
+	.mts-sidebar-text h4 {
+		margin-top: 0;
+	}
+
+	.mts-sidebar-img {
+		flex: 0 0 90px;
+	}
+
+	.mts-sidebar-img img {
+		width: 90px;
+		height: 90px;
+		object-fit: cover;
+	}
+
+	/* ===== Go Deeper Tablet Layout ===== */
+	.go-deeper {
+		margin-top: 20px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+
+	.go-deeper-card p {
+		display: none;
+	}
+
+	/* ===== The Week in Politics Tablet Layout ===== */
+	.week-politics {
+		display: grid !important;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 24px;
+		row-gap: 0;
 		margin-top: 15px !important;
-		padding-top: 15px !important;
+		margin-bottom: -15px !important;
+	}
+
+	.week-politics-header {
+		grid-column: 1 / 3;
+		margin-bottom: 10px !important;
+		margin-top: -16px;
+	}
+
+	.week-politics-top,
+	.wp-bottom-cards {
+		display: contents !important;
+	}
+
+	.wp-block {
+		grid-column: 1;
+		grid-row: 2 / 4;
+		display: flex !important;
+		flex-direction: column-reverse;
+		align-self: stretch;
+	}
+
+	.wp-featured-image img {
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 354 / 199 !important;
+		object-fit: cover !important;
+	}
+
+	.wp-featured-text {
+		padding-top: 8px;
+		padding-bottom: 12px;
+	}
+
+	.wp-featured-text p {
+		display: none;
+	}
+
+	.wp-featured-text h3 {
+		margin-bottom: 4px !important;
+	}
+
+	.wp-sidebar-card,
+	.wp-card {
+		display: grid !important;
+		grid-template-columns: 1fr 90px;
+		gap: 0 12px;
+		align-items: start;
+		padding: 8px 0;
+		border: none;
+		max-width: 100% !important;
+	}
+
+	.wp-sidebar-card {
+		padding-top: 0 !important;
+	}
+
+	.wp-sidebar-card img,
+	.wp-card img {
+		grid-column: 2;
+		grid-row: 1 / 4;
+		width: 90px !important;
+		height: 90px !important;
+		object-fit: cover;
+	}
+
+	.wp-sidebar-card h3,
+	.wp-card h3 {
+		grid-column: 1;
+		margin-top: 0;
+		margin-bottom: 2px !important;
+	}
+
+	.wp-sidebar-card .meta,
+	.wp-card .meta {
+		grid-column: 1;
+	}
+
+	/* Grid placement */
+	.wp-sidebar-card {
+		grid-column: 2;
+		grid-row: 2;
+		align-self: start;
+	}
+
+	.wp-card:nth-child(2) {
+		grid-column: 2;
+		grid-row: 4;
+		align-self: start;
+	}
+
+	.wp-card:nth-child(1) {
+		grid-column: 1;
+		grid-row: 4;
+	}
+
+	.wp-card:nth-child(3) {
+		grid-column: 1;
+		grid-row: 5;
+	}
+
+	/* ===== Managing Your Money Tablet Layout ===== */
+	.managing-money {
+		margin-top: 20px !important;
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+	}
+
+	.mm-card p {
+		display: none;
+	}
+
+	.mm-date {
+		margin-bottom: 12px !important;
+	}
+
+	.mm-sublinks {
+		gap: 4px !important;
+	}
+
+	.mm-sublinks a {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 15px !important;
+		font-weight: 700 !important;
+		line-height: 1.25 !important;
+	}
+
+	/* ===== Top Videos Tablet Layout ===== */
+	.top-videos {
+		padding-top: 0 !important;
+		padding-bottom: 15px !important;
+	}
+
+	.tv-header-row {
+		display: flex !important;
+		flex-direction: column;
+		margin-bottom: 10px !important;
+	}
+
+	.tv-featured-video {
+		display: block !important;
+		order: 1;
+		margin-top: 0 !important;
+		margin-bottom: -30px !important;
+		width: 100vw !important;
+		margin-left: calc(-50vw + 50%) !important;
+		margin-right: calc(-50vw + 50%) !important;
+		max-width: none !important;
+	}
+
+	.tv-featured-video img {
+		width: 100vw !important;
+		height: auto !important;
+		aspect-ratio: 21 / 9 !important;
+		object-fit: cover !important;
+	}
+
+	.tv-featured-video .play-button-large {
+		display: none !important;
+	}
+
+	.tv-text-col {
+		order: 2;
+		width: 100% !important;
+		padding-top: 0px !important;
+	}
+
+	.tv-text-col h3 {
+		font-family: "Publico Headline", 'Playfair Display', serif !important;
+		font-size: 45px !important;
+		font-weight: 900 !important;
+		margin-top: -8px !important;
+		margin-bottom: 20px !important;
+	}
+
+	.tv-text-col p,
+	.tv-text-col .meta {
+		display: none !important;
+	}
+
+	.tv-grid {
+		display: flex !important;
+		justify-content: space-between !important;
+		gap: 10px !important;
+	}
+
+	.tv-card {
+		flex: 0 0 167px !important;
+		width: 167px !important;
+	}
+
+	.tv-card img {
+		width: 167px !important;
+		height: 94px !important;
+		object-fit: cover !important;
+	}
+
+	.tv-card h3 {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 13px !important;
+		font-weight: 700 !important;
+		line-height: 1.25 !important;
+		margin-top: -5px !important;
+		margin-bottom: -1px !important;
+		color: #fff !important;
+	}
+
+	.tv-card h3 a {
+		color: #fff !important;
+	}
+
+	.tv-card .meta {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 11px !important;
+		font-weight: 400 !important;
+		color: #fff !important;
+	}
+
+	.tv-card .meta span {
+		color: #fff !important;
+	}
+
+	/* ===== Live Channels Tablet Layout ===== */
+	.live-channels {
+		padding: 20px 0 !important;
+	}
+
+	.lc-desktop-view {
+		display: block !important;
+	}
+
+	.lc-header {
+		margin-bottom: 24px !important;
+	}
+
+	.lc-grid {
+		display: none !important;
+		/* Hide desktop logo cards */
+	}
+
+	.lc-mobile-view {
+		display: block !important;
+		margin-top: 0 !important;
+	}
+
+	.lc-title {
+		display: none !important;
+		/* Hide mobile title */
+	}
+
+	.lc-new-grid {
+		display: grid !important;
+		grid-template-columns: repeat(4, 1fr) !important;
+		gap: 16px !important;
+		overflow-x: visible !important;
+		padding-bottom: 0 !important;
+	}
+
+	.lc-new-card {
+		flex: none !important;
+		width: 100% !important;
+	}
+
+	.lc-new-card:nth-child(n+5) {
+		display: none !important;
+		/* Show only 4 cards */
+	}
+
+	.lc-img-wrapper img {
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 16 / 9 !important;
+		object-fit: cover !important;
+	}
+
+	.lc-new-card h3 {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 13px !important;
+		font-weight: 700 !important;
+		line-height: 1.25 !important;
+		margin-top: 4px !important;
+		margin-bottom: 0 !important;
+	}
+
+	.lc-new-card h3 a {
+		transition: opacity 0.2s, text-decoration 0.2s;
+	}
+
+	.lc-new-card h3 a:hover {
+		text-decoration: underline !important;
+		opacity: 0.7 !important;
+	}
+
+	/* ─── THE DISH, 60 MINUTES (CBS Mornings clone) Tablet ─── */
+	.evening-news-desktop-view,
+	.sixty-minutes-desktop-view,
+	.categories-desktop-view {
+		display: none !important;
+	}
+
+	.dish-mobile-view {
+		display: block !important;
+	}
+
+	.top-videos.evening-news,
+	.top-videos.sixty-minutes {
+		background-color: #101010 !important;
+	}
+
+	.dish-mobile-view .tv-text-col h3 {
+		margin-bottom: 0px !important;
+	}
+
+	/* Restore meta for CBS Mornings section since it was hidden globally for .tv-text-col */
+	.dish-mobile-view .tv-text-col .meta {
+		display: block !important;
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 11px !important;
+		font-weight: 400 !important;
+		color: #fff !important;
+		letter-spacing: 0.5px !important;
+		margin-top: 2px !important;
+		margin-bottom: 32px;
+	}
+
+	.dish-mobile-view .tv-text-col .meta span {
+		color: #fff !important;
+	}
+
+	/* "More from..." button */
+	.dish-more {
+		display: block !important;
+		border: 1px solid #fff !important;
+		border-radius: 4px !important;
+		padding: 14px 0 !important;
+		text-align: center !important;
+		margin-top: 12px !important;
+		width: 100% !important;
+		font-size: 12px !important;
+		font-weight: 700 !important;
+		color: #fff !important;
+		text-decoration: none !important;
+	}
+
+	.dish-more:hover {
+		background-color: #fff !important;
+		color: #000 !important;
+	}
+
+	/* ===== Footer Tablet Layout ===== */
+	.footer {
+		padding: 25px 0 80px !important;
+	}
+
+	.footer-logo {
+		display: flex !important;
+		justify-content: center !important;
+		width: 100% !important;
+		margin-top: -10px !important;
+		margin-bottom: 20px !important;
+	}
+
+	.footer-logo svg {
+		width: 260px !important;
+		margin: 0 auto !important;
+		display: block !important;
+		transform: translateX(14%) !important;
+	}
+
+	.footer-links {
+		grid-template-columns: repeat(3, 1fr) !important;
+		gap: 20px !important;
+		row-gap: 30px !important;
+	}
+
+	.footer-links-title {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 16px !important;
+		font-weight: 700 !important;
+	}
+
+	.footer-links-item a {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
+		font-size: 16px !important;
+		font-weight: 400 !important;
+	}
+
+	.footer-copyright {
+		margin-top: 20px !important;
 	}
 }
 

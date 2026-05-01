@@ -19,8 +19,8 @@
 		<div class="header-container">
 			<!-- Header words and square button -->
 			<div class="header-navs-container">
-				<button class="burger-menu" id="burger-menu" aria-hidden="true" aria-expanded="false"
-					aria-controls="nav-links">
+				<button class="burger-menu" id="burger-menu" data-element="burger-menu" aria-hidden="true"
+					aria-expanded="false" aria-controls="nav-links">
 					<span class="sr-only">Open main menu</span>
 					<div class="grid-icon">
 						<span></span><span></span><span></span>
@@ -35,7 +35,7 @@
 					</svg>
 				</button>
 
-				<nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+				<nav class="nav-links" id="nav-links" data-element="nav-links" aria-label="Main Navigation">
 					<ul>
 						<li>
 							<a href="#" aria-haspopup="true" aria-expanded="false">Latest <svg class="arrow-down"
@@ -130,7 +130,7 @@
 								</svg>
 							</a>
 							<div class="popup" aria-hidden="true">
-								<div class="popup-content">
+								<div class="popup-content popup-content-0">
 									<p>48 Hours</p>
 									<p>The Daily Report</p>
 									<p>60 Minutes</p>
@@ -224,7 +224,7 @@
 		</div>
 	</header>
 
-	<div class="burger-overlay"></div>
+	<div class="burger-overlay" data-element="burger-overlay"></div>
 	<div class="burger-popup">
 		<div class="burger-content">
 			<div class="section">
@@ -469,8 +469,7 @@
 					<div class="mts-cards">
 						<article class="mts-card">
 							<img src="https://placehold.co/300x169" alt="Placeholder">
-							<span class="tag mts-tag">EXCLUSIVE</span>
-							<h3><a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse</a>
+							<h3><a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate</a>
 							</h3>
 							<span class="meta">5H AGO</span>
 						</article>
@@ -745,7 +744,7 @@
 							<img src="https://placehold.co/300x170" alt="Placeholder">
 							<div class="play-button-small">▶</div>
 						</div>
-						<h3><a href="#">Hegseth about the Iran war</a></h3>
+						<h3><a href="#">Lorem ipsum dolor: Sit amet</a></h3>
 						<span class="meta">7H AGO <span>▶ 3:44</span></span>
 					</article>
 					<article class="tv-card">
@@ -753,7 +752,7 @@
 							<img src="https://placehold.co/300x170" alt="Placeholder">
 							<div class="play-button-small">▶</div>
 						</div>
-						<h3><a href="#">Coast Guard chief on shutdown's impacts</a></h3>
+						<h3><a href="#">Lorem ipsum dolor: Sit amet</a></h3>
 						<span class="meta">5H AGO <span>▶ 4:26</span></span>
 					</article>
 					<article class="tv-card">
@@ -761,7 +760,7 @@
 							<img src="https://placehold.co/300x170" alt="Placeholder">
 							<div class="play-button-small">▶</div>
 						</div>
-						<h3><a href="#">Stars preview "Devil Wears Prada 2"</a></h3>
+						<h3><a href="#">Lorem ipsum dolor: Sit amet</a></h3>
 						<span class="meta">6H AGO <span>▶ 5:30</span></span>
 					</article>
 					<article class="tv-card">
@@ -769,7 +768,7 @@
 							<img src="https://placehold.co/300x170" alt="Placeholder">
 							<div class="play-button-small">▶</div>
 						</div>
-						<h3><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></h3>
+						<h3><a href="#">Lorem ipsum dolor: Sit amet</a></h3>
 						<span class="meta">9H AGO <span>▶ 2:18</span></span>
 					</article>
 				</div>
@@ -1015,7 +1014,7 @@
 							<span class="meta">MAR 28 <span>▶ 5:45</span></span>
 						</article>
 					</div>
-					<a href="#" class="more-link-inline white-more dish-more">More ›</a>
+					<a href="#" class="more-link-inline white-more dish-more">More from CBS Mornings ›</a>
 				</div>
 			</div>
 		</section>
@@ -1031,7 +1030,8 @@
 					<div class="tv-header-row">
 						<div class="tv-text-col">
 							<h3>Lorem ipsum</h3>
-							<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam,
 								quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
 							<span class="meta">12H AGO <span>▶ 1:52</span></span>
 						</div>
@@ -1127,7 +1127,7 @@
 							<span class="meta">MAR 28 <span>▶ 5:45</span></span>
 						</article>
 					</div>
-					<a href="#" class="more-link-inline white-more dish-more">More ›</a>
+					<a href="#" class="more-link-inline white-more dish-more">More from The Dish ›</a>
 				</div>
 			</div>
 		</section>
@@ -1142,13 +1142,17 @@
 							<h2 class="cat-title">U.S.</h2>
 							<img src="https://placehold.co/300x169" alt="Placeholder">
 							<ul class="cat-news-list">
-								<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a>
+								<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod</a>
 								</li>
 								<li><a href="#">Tempor incididunt ut labore et dolore magna aliqua ut enim ad</a></li>
-								<li><a href="#">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</a>
+								<li><a href="#">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip</a>
 								</li>
-								<li><a href="#">Ex ea commodo consequat duis aute irure dolor in reprehenderit in</a></li>
-								<li><a href="#">Voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur</a>
+								<li><a href="#">Ex ea commodo consequat duis aute irure dolor in reprehenderit in</a>
+								</li>
+								<li><a href="#">Voluptate velit esse cillum dolore eu fugiat nulla pariatur
+										excepteur</a>
 								</li>
 							</ul>
 							<div class="cat-more">
@@ -1161,10 +1165,14 @@
 							<img src="https://placehold.co/300x169" alt="Placeholder">
 							<ul class="cat-news-list">
 								<li><a href="#">Sint occaecat cupidatat non proident sunt in culpa qui</a></li>
-								<li><a href="#">Deserunt mollit anim id est laborum sed ut perspiciatis unde omnis</a></li>
-								<li><a href="#">Iste natus error sit voluptatem accusantium doloremque laudantium</a></li>
-								<li><a href="#">Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et</a></li>
-								<li><a href="#">Quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam</a></li>
+								<li><a href="#">Deserunt mollit anim id est laborum sed ut perspiciatis unde omnis</a>
+								</li>
+								<li><a href="#">Iste natus error sit voluptatem accusantium doloremque laudantium</a>
+								</li>
+								<li><a href="#">Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et</a>
+								</li>
+								<li><a href="#">Quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam</a>
+								</li>
 							</ul>
 							<div class="cat-more">
 								<a href="#">More from MoneyWatch</a>
@@ -1179,7 +1187,8 @@
 								<li><a href="#">Fugit sed quia consequuntur magni dolores eos qui</a></li>
 								<li><a href="#">Ratione voluptatem sequi nesciunt neque porro quisquam est</a></li>
 								<li><a href="#">Qui dolorem ipsum quia dolor sit amet consectetur adipisci</a></li>
-								<li><a href="#">Velit sed quia non numquam eius modi tempora incidunt ut labore et</a></li>
+								<li><a href="#">Velit sed quia non numquam eius modi tempora incidunt ut labore et</a>
+								</li>
 							</ul>
 							<div class="cat-more">
 								<a href="#">More in Politics</a>
@@ -1213,13 +1222,17 @@
 							<h2 class="cat-title">World</h2>
 							<img src="https://placehold.co/300x169" alt="Placeholder">
 							<ul class="cat-news-list">
-								<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a>
+								<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod</a>
 								</li>
 								<li><a href="#">Tempor incididunt ut labore et dolore magna aliqua ut enim ad</a></li>
-								<li><a href="#">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</a>
+								<li><a href="#">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip</a>
 								</li>
-								<li><a href="#">Ex ea commodo consequat duis aute irure dolor in reprehenderit in</a></li>
-								<li><a href="#">Voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur</a>
+								<li><a href="#">Ex ea commodo consequat duis aute irure dolor in reprehenderit in</a>
+								</li>
+								<li><a href="#">Voluptate velit esse cillum dolore eu fugiat nulla pariatur
+										excepteur</a>
 								</li>
 							</ul>
 							<div class="cat-more">
@@ -1232,10 +1245,14 @@
 							<img src="https://placehold.co/300x169" alt="Placeholder">
 							<ul class="cat-news-list">
 								<li><a href="#">Sint occaecat cupidatat non proident sunt in culpa qui</a></li>
-								<li><a href="#">Deserunt mollit anim id est laborum sed ut perspiciatis unde omnis</a></li>
-								<li><a href="#">Iste natus error sit voluptatem accusantium doloremque laudantium</a></li>
-								<li><a href="#">Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et</a></li>
-								<li><a href="#">Quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam</a></li>
+								<li><a href="#">Deserunt mollit anim id est laborum sed ut perspiciatis unde omnis</a>
+								</li>
+								<li><a href="#">Iste natus error sit voluptatem accusantium doloremque laudantium</a>
+								</li>
+								<li><a href="#">Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et</a>
+								</li>
+								<li><a href="#">Quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam</a>
+								</li>
 							</ul>
 							<div class="cat-more">
 								<a href="#">More in Entertainment</a>
@@ -1250,7 +1267,8 @@
 								<li><a href="#">Fugit sed quia consequuntur magni dolores eos qui</a></li>
 								<li><a href="#">Ratione voluptatem sequi nesciunt neque porro quisquam est</a></li>
 								<li><a href="#">Qui dolorem ipsum quia dolor sit amet consectetur adipisci</a></li>
-								<li><a href="#">Velit sed quia non numquam eius modi tempora incidunt ut labore et</a></li>
+								<li><a href="#">Velit sed quia non numquam eius modi tempora incidunt ut labore et</a>
+								</li>
 							</ul>
 							<div class="cat-more">
 								<a href="#">More in Technology</a>
@@ -1284,13 +1302,17 @@
 							<h2 class="cat-title">Crime</h2>
 							<img src="https://placehold.co/300x169" alt="Placeholder">
 							<ul class="cat-news-list">
-								<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a>
+								<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod</a>
 								</li>
 								<li><a href="#">Tempor incididunt ut labore et dolore magna aliqua ut enim ad</a></li>
-								<li><a href="#">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</a>
+								<li><a href="#">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip</a>
 								</li>
-								<li><a href="#">Ex ea commodo consequat duis aute irure dolor in reprehenderit in</a></li>
-								<li><a href="#">Voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur</a>
+								<li><a href="#">Ex ea commodo consequat duis aute irure dolor in reprehenderit in</a>
+								</li>
+								<li><a href="#">Voluptate velit esse cillum dolore eu fugiat nulla pariatur
+										excepteur</a>
 								</li>
 							</ul>
 							<div class="cat-more">
@@ -1303,10 +1325,14 @@
 							<img src="https://placehold.co/300x169" alt="Placeholder">
 							<ul class="cat-news-list">
 								<li><a href="#">Sint occaecat cupidatat non proident sunt in culpa qui</a></li>
-								<li><a href="#">Deserunt mollit anim id est laborum sed ut perspiciatis unde omnis</a></li>
-								<li><a href="#">Iste natus error sit voluptatem accusantium doloremque laudantium</a></li>
-								<li><a href="#">Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et</a></li>
-								<li><a href="#">Quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam</a></li>
+								<li><a href="#">Deserunt mollit anim id est laborum sed ut perspiciatis unde omnis</a>
+								</li>
+								<li><a href="#">Iste natus error sit voluptatem accusantium doloremque laudantium</a>
+								</li>
+								<li><a href="#">Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et</a>
+								</li>
+								<li><a href="#">Quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam</a>
+								</li>
 							</ul>
 							<div class="cat-more">
 								<a href="#">More in Space</a>
@@ -1321,7 +1347,8 @@
 								<li><a href="#">Fugit sed quia consequuntur magni dolores eos qui</a></li>
 								<li><a href="#">Ratione voluptatem sequi nesciunt neque porro quisquam est</a></li>
 								<li><a href="#">Qui dolorem ipsum quia dolor sit amet consectetur adipisci</a></li>
-								<li><a href="#">Velit sed quia non numquam eius modi tempora incidunt ut labore et</a></li>
+								<li><a href="#">Velit sed quia non numquam eius modi tempora incidunt ut labore et</a>
+								</li>
 							</ul>
 							<div class="cat-more">
 								<a href="#">More Latest Galleries</a>
@@ -1841,10 +1868,12 @@
 						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
 							commodo
 							consequat.</p>
-						<span class="meta" style="display: flex; align-items: center; gap: 14px;">4H AGO 
+						<span class="meta" style="display: flex; align-items: center; gap: 14px;">4H AGO
 							<span style="display: flex; align-items: center; gap: 4px; color: #111;">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-									<path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+									fill="currentColor">
+									<path
+										d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
 								</svg>
 								29 PHOTOS
 							</span>
@@ -1857,10 +1886,12 @@
 				<div class="wp-sidebar-card">
 					<img src="https://placehold.co/300x169" alt="Placeholder">
 					<h3><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse</a></h3>
-					<span class="meta" style="display: flex; align-items: center; gap: 14px;">9H AGO 
+					<span class="meta" style="display: flex; align-items: center; gap: 14px;">9H AGO
 						<span style="display: flex; align-items: center; gap: 4px; color: #111;">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-								<path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+								fill="currentColor">
+								<path
+									d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
 							</svg>
 							29 PHOTOS
 						</span>
@@ -1872,10 +1903,12 @@
 				<article class="wp-card">
 					<img src="https://placehold.co/300x169" alt="Placeholder">
 					<h3><a href="#">Sed ut perspiciatis unde omnis iste natus error</a></h3>
-					<span class="meta" style="display: flex; align-items: center; gap: 14px;">UPDATED 50M AGO 
+					<span class="meta" style="display: flex; align-items: center; gap: 14px;">UPDATED 50M AGO
 						<span style="display: flex; align-items: center; gap: 4px; color: #111;">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-								<path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+								fill="currentColor">
+								<path
+									d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
 							</svg>
 							29 PHOTOS
 						</span>
@@ -1884,10 +1917,12 @@
 				<article class="wp-card">
 					<img src="https://placehold.co/300x169" alt="Placeholder">
 					<h3><a href="#">At vero eos et accusamus et iusto odio dignissimos ducimus</a></h3>
-					<span class="meta" style="display: flex; align-items: center; gap: 14px;">2H AGO 
+					<span class="meta" style="display: flex; align-items: center; gap: 14px;">2H AGO
 						<span style="display: flex; align-items: center; gap: 4px; color: #111;">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-								<path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+								fill="currentColor">
+								<path
+									d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
 							</svg>
 							29 PHOTOS
 						</span>
@@ -1896,10 +1931,12 @@
 				<article class="wp-card">
 					<img src="https://placehold.co/300x169" alt="Placeholder">
 					<h3><a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit</a></h3>
-					<span class="meta" style="display: flex; align-items: center; gap: 14px;">1H AGO 
+					<span class="meta" style="display: flex; align-items: center; gap: 14px;">1H AGO
 						<span style="display: flex; align-items: center; gap: 4px; color: #111;">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-								<path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+								fill="currentColor">
+								<path
+									d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
 							</svg>
 							29 PHOTOS
 						</span>
@@ -1972,7 +2009,7 @@
 				<dl class="footer-links-group">
 					<dt class="footer-links-title">Featured</dt>
 					<dd class="footer-links-item">
-						<a href="#">Supreme Court Louisiana Redistricting Case</a>
+						<a href="#">Spirit Airlines</a>
 					</dd>
 					<dd class="footer-links-item">
 						<a href="#">Iran War Coverage</a>
