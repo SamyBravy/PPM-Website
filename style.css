@@ -378,7 +378,7 @@ ul {
 	left: 0;
 	width: 100%;
 	height: calc(100% - 64px);
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.243);
 	z-index: 999;
 	display: none;
 }

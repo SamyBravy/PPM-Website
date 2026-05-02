@@ -1,12 +1,12 @@
-const burgerMenu = document.getElementById('burger-menu');
-const navLinks = document.getElementById('nav-links');
+const burgerMenu = document.querySelector('[data-element="burger-menu"]');
+const navLinks = document.querySelector('[data-element="nav-links"]');
 
 if (burgerMenu && navLinks) {
 	burgerMenu.addEventListener('click', () => {
 		burgerMenu.classList.toggle('open');
 		const isExpanded = burgerMenu.getAttribute('aria-expanded') === 'true';
 		burgerMenu.setAttribute('aria-expanded', !isExpanded);
-		
+
 		if (!isExpanded) {
 			navLinks.classList.add('mobile-open');
 			const overlay = document.querySelector('.burger-overlay');
