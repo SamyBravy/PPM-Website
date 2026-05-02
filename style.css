@@ -1,4 +1,4 @@
-﻿* {
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -4342,8 +4342,20 @@ ul {
 		margin-left: 15px;
 	}
 
-	.week-politics-top {
-		grid-template-columns: 290px 1fr 1fr 285px;
+	.week-politics {
+		display: grid !important;
+		grid-template-columns: 290px 1fr 1fr 300px;
+		column-gap: 25px;
+	}
+
+	.week-politics-header {
+		grid-column: 1 / 5;
+		grid-row: 1;
+	}
+
+	.week-politics-top,
+	.wp-bottom-cards {
+		display: contents !important;
 	}
 
 	.wp-block {
@@ -4352,38 +4364,48 @@ ul {
 
 	.wp-featured-text {
 		grid-column: 1;
+		grid-row: 2;
 	}
 
 	.wp-featured-image {
 		grid-column: 2 / 4;
+		grid-row: 2;
 		margin-left: 15px;
 	}
 
 	.wp-sidebar-card {
 		grid-column: 4;
+		grid-row: 2 / 4;
 	}
 
-	.wp-bottom-cards {
-		grid-template-columns: 290px 1fr 1fr 285px;
-		gap: 25px;
+	.wp-sidebar-card img {
+		width: 300px !important;
+		height: 169px !important;
+		object-fit: cover !important;
 	}
 
 	.wp-bottom-cards .wp-card:nth-child(1) {
 		grid-column: 1;
+		grid-row: 3;
+		margin-top: 25px;
 	}
 
 	.wp-bottom-cards .wp-card:nth-child(2) {
 		grid-column: 2;
+		grid-row: 3;
 		margin-left: 15px;
+		margin-top: 25px;
 	}
 
 	.wp-bottom-cards .wp-card:nth-child(3) {
 		grid-column: 3;
-		justify-self: end;
+		grid-row: 3;
+		margin-top: 25px;
 	}
 
 	.hero-text h1,
-	.mts-featured-text h3 {
+	.mts-featured-text h3,
+	.wp-featured-text h3 {
 		font-family: 'Publico Headline', 'Playfair Display', serif;
 		font-weight: 700;
 		font-size: 32px;
@@ -4393,7 +4415,8 @@ ul {
 	.hero-text p,
 	.topic-card-text p,
 	.mts-featured-text p,
-	.go-deeper-card p {
+	.go-deeper-card p,
+	.wp-featured-text p {
 		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
 		font-weight: 400;
 		font-size: 18px;
@@ -4401,11 +4424,20 @@ ul {
 	}
 
 	.mts-card h3,
-	.go-deeper-card h3 {
+	.go-deeper-card h3,
+	.wp-sidebar-card h3,
+	.wp-card h3 {
 		font-family: 'Publico Headline', 'Playfair Display', serif;
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 26px;
+	}
+
+	.mm-sublinks a {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 17px;
 	}
 
 	.sidebar-news .news-item {
@@ -4418,5 +4450,10 @@ ul {
 
 	.more-stories {
 		margin-bottom: -30px;
+	}
+
+	.us-mobile-section,
+	.mobile-section-divider {
+		display: none !important;
 	}
 }
