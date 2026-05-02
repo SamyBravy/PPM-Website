@@ -1,5 +1,6 @@
 const burgerMenu = document.querySelector('[data-element="burger-menu"]');
 const navLinks = document.querySelector('[data-element="nav-links"]');
+const overlay = document.querySelector('[data-element="burger-overlay"]');
 
 if (burgerMenu && navLinks) {
 	burgerMenu.addEventListener('click', () => {
@@ -9,18 +10,15 @@ if (burgerMenu && navLinks) {
 
 		if (!isExpanded) {
 			navLinks.classList.add('mobile-open');
-			const overlay = document.querySelector('.burger-overlay');
 			if (overlay) overlay.classList.add('open');
 			document.body.classList.add('no-scroll');
 		} else {
 			navLinks.classList.remove('mobile-open');
-			const overlay = document.querySelector('.burger-overlay');
 			if (overlay) overlay.classList.remove('open');
 			document.body.classList.remove('no-scroll');
 		}
 	});
 
-	const overlay = document.querySelector('.burger-overlay');
 	if (overlay) {
 		overlay.addEventListener('click', () => {
 			burgerMenu.classList.remove('open');

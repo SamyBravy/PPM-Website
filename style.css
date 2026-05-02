@@ -567,11 +567,6 @@ ul {
 	grid-column: span 1;
 }
 
-.hero-text h1 {
-	font-size: 32px;
-	font-weight: 700;
-}
-
 .hero-image {
 	grid-column: span 2;
 }
@@ -1502,7 +1497,7 @@ ul {
 }
 
 .video-wrapper:hover .play-button-small {
-	background-color: #000
+	background-color: #000;
 }
 
 .tv-card h3 {
