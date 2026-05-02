@@ -1,4 +1,3 @@
-/* Base and Reset */
 * {
 	margin: 0;
 	padding: 0;
@@ -19,7 +18,6 @@ img {
 	display: block;
 }
 
-/* Make all placeholders visually clickable */
 img[src*="placehold.co"] {
 	cursor: pointer;
 }
@@ -29,7 +27,6 @@ a {
 	color: inherit;
 }
 
-/* Typography */
 h1,
 h2,
 h3,
@@ -51,7 +48,6 @@ h6 {
 	margin-top: 10px;
 }
 
-/*-------------------------------------------------HEADER-----------------------------------------------------------------*/
 
 .cbs-header {
 	position: fixed;
@@ -321,7 +317,6 @@ ul {
 	background-color: rgba(210, 210, 210, 0.5);
 }
 
-/*-------------------------------------------------BURGER MENU-----------------------------------------------------------------*/
 
 .burger-menu .grid-icon {
 	display: grid;
@@ -467,7 +462,6 @@ ul {
 	border: 0;
 }
 
-/*-------------------------------------------------UNDER HEADER-----------------------------------------------------------------*/
 
 .under-header {
 	background-color: #fff;
@@ -543,15 +537,13 @@ ul {
 	}
 }
 
-/* Main Layout */
 .main-container {
 	display: grid;
 	grid-template-columns: 1fr 300px;
 	gap: 40px;
-	margin-top: 30px;
+	margin-top: 40px;
 }
 
-/* Hero Section */
 .hero-section {
 	display: flex;
 	flex-direction: column;
@@ -610,7 +602,6 @@ ul {
 	margin-bottom: 15px;
 }
 
-/* Thumbnails */
 .hero-thumbnails {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -653,10 +644,8 @@ ul {
 
 .live-tag+h2 {
 	margin-top: 6px;
-	/* Reduced margin if tag is present above it */
 }
 
-/* Sidebar */
 .sidebar {
 	display: flex;
 	flex-direction: column;
@@ -676,7 +665,6 @@ ul {
 	object-fit: cover;
 }
 
-/* Simulate the CBS News 24/7 Video overlay */
 .video-overlay {
 	position: absolute;
 	bottom: 0;
@@ -698,7 +686,6 @@ ul {
 	align-items: center;
 }
 
-/* Sidebar News Items */
 .sidebar-news {
 	display: flex;
 	flex-direction: column;
@@ -741,7 +728,6 @@ ul {
 	text-decoration: underline;
 }
 
-/* ===== Topic Cluster Section ===== */
 .topic-cluster {
 	position: relative;
 	margin-top: 30px;
@@ -833,7 +819,6 @@ ul {
 	object-fit: cover;
 }
 
-/* ===== More Top Stories Section ===== */
 .more-stories {
 	position: relative;
 	margin-top: 50px;
@@ -872,7 +857,6 @@ ul {
 	}
 }
 
-/* Single grid layout: 3 columns, sidebar spans 2 rows */
 .mts-grid {
 	display: grid;
 	grid-template-columns: 300px auto 320px;
@@ -950,7 +934,6 @@ ul {
 	object-fit: cover;
 }
 
-/* Sidebar items — no borders */
 .mts-sidebar-item {
 	display: flex;
 	gap: 12px;
@@ -989,7 +972,6 @@ ul {
 	object-fit: cover;
 }
 
-/* Article cards */
 .mts-card {
 	max-width: 300px;
 }
@@ -1029,7 +1011,6 @@ ul {
 	text-decoration: underline;
 }
 
-/* ===== Go Deeper Banner ===== */
 .go-deeper {
 	background-color: #005591;
 	margin-top: 40px;
@@ -1107,7 +1088,6 @@ ul {
 	letter-spacing: 0.5px;
 }
 
-/* ===== The Week in Politics ===== */
 .week-politics {
 	position: relative;
 	margin-top: 35px;
@@ -1142,8 +1122,19 @@ ul {
 	margin-bottom: 40px;
 }
 
+.wp-featured-image {
+	margin-left: 0;
+}
+
 .wp-block {
-	display: contents;
+	display: flex;
+}
+
+.wp-bottom-cards {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: start;
+	gap: 30px;
 }
 
 @media (max-width: 1350px) {
@@ -1194,9 +1185,9 @@ ul {
 
 .wp-bottom-cards {
 	display: grid;
-	grid-template-columns: repeat(3, auto);
+	grid-template-columns: 290px auto 300px;
 	justify-content: start;
-	gap: 30px;
+	gap: 25px;
 }
 
 .wp-card {
@@ -1219,7 +1210,6 @@ ul {
 	text-decoration: underline;
 }
 
-/* ===== Managing Your Money ===== */
 .managing-money {
 	background-color: #00711A;
 	margin-top: 40px;
@@ -1317,7 +1307,6 @@ ul {
 	color: #e6f4fb;
 }
 
-/* ===== Top Videos ===== */
 .top-videos {
 	background-color: #111;
 	margin-top: 30px;
@@ -1346,7 +1335,7 @@ ul {
 }
 
 .tv-featured-video {
-	margin-top: 82px;
+	margin-top: 0;
 }
 
 .tv-text-col h2 {
@@ -1404,7 +1393,6 @@ ul {
 
 .top-videos.sixty-minutes {
 	background-color: #a60a02;
-	/* Dark red */
 	margin-top: 0;
 }
 
@@ -1419,7 +1407,7 @@ ul {
 	font-weight: 700;
 	padding: 3px 8px;
 	border-radius: 2px;
-	margin-bottom: 0px;
+	margin-bottom: 6px;
 	line-height: 0.8;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
@@ -1545,7 +1533,6 @@ ul {
 	gap: 10px;
 }
 
-/* Live Channels Section */
 .live-channels {
 	padding: 40px 0;
 	background-color: #fff;
@@ -1564,7 +1551,6 @@ ul {
 	display: none;
 }
 
-/* ===== News Categories ===== */
 .news-categories {
 	background-color: #fff;
 	padding: 50px 0 40px;
@@ -1579,6 +1565,8 @@ ul {
 	margin: 0 auto;
 	padding: 0;
 }
+
+
 
 .cat-grid {
 	display: grid;
@@ -1602,7 +1590,7 @@ ul {
 .cat-col img {
 	width: 100%;
 	display: block;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 .cat-news-list {
@@ -1612,11 +1600,10 @@ ul {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	/* Pushes the 'more' link to the bottom */
 }
 
 .cat-news-list li {
-	margin-bottom: 17px;
+	margin-bottom: 14px;
 }
 
 .cat-news-list li a {
@@ -1625,7 +1612,7 @@ ul {
 	font-weight: 700;
 	color: #000;
 	text-decoration: none;
-	line-height: 1.35;
+	line-height: 1.25;
 	display: block;
 }
 
@@ -1637,7 +1624,7 @@ ul {
 .cat-more {
 	border-top: 1px solid #e0e0e0;
 	padding-top: 15px;
-	margin-top: 40px;
+	margin-top: 50px;
 }
 
 .cat-more a {
@@ -1854,7 +1841,6 @@ ul {
 	text-align: left;
 }
 
-/* TABLET LAYOUT */
 @media (min-width: 768px) and (max-width: 1019px) {
 
 	html,
@@ -1862,7 +1848,6 @@ ul {
 		overflow-x: hidden;
 	}
 
-	/* Mobile Section Divider */
 	.mobile-section-divider {
 		grid-column: 1 / -1;
 		width: 100vw;
@@ -1874,12 +1859,10 @@ ul {
 		display: block;
 	}
 
-	/* Center logo */
 	.header-logo-container {
 		padding: 0;
 	}
 
-	/* Sticky under-header below fixed header */
 	.under-header {
 		position: sticky;
 		top: 48px;
@@ -1920,7 +1903,6 @@ ul {
 		margin-top: 15px;
 	}
 
-	/* All timestamps: black, 11px, Proxima Nova 400 */
 	.meta,
 	.meta * {
 		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
@@ -1930,7 +1912,6 @@ ul {
 		margin-top: 4px;
 	}
 
-	/* Force "More ›" on tablet for all more-links except the special Dish one */
 	.more-link-inline:not(.dish-more) {
 		font-size: 0 !important;
 	}
@@ -1938,14 +1919,12 @@ ul {
 	.more-link-inline:not(.dish-more)::after {
 		content: "More ›";
 		font-size: 15px !important;
-		/* Restore original font size */
 	}
 
 	.more-link-inline:not(.dish-more):hover::after {
 		text-decoration: underline;
 	}
 
-	/* All titles for tablet version: 17px, 700 weight, Publico Headline */
 	.main-container h1,
 	.main-container h2,
 	.main-container h3,
@@ -1965,7 +1944,6 @@ ul {
 		line-height: 1.2 !important;
 	}
 
-	/* Flatten all containers so children participate in the grid */
 	.hero-section,
 	.hero-content,
 	.hero-thumbnails,
@@ -1974,7 +1952,6 @@ ul {
 		display: contents;
 	}
 
-	/* Hero image: left column, spans 2 rows (so both thumbs fit on right) */
 	.hero-image {
 		grid-column: 1;
 		grid-row: 1 / 3;
@@ -1987,7 +1964,6 @@ ul {
 		object-fit: cover;
 	}
 
-	/* Hero text: left column, row 3 */
 	.hero-text {
 		grid-column: 1;
 		grid-row: 3;
@@ -2002,7 +1978,6 @@ ul {
 		display: none;
 	}
 
-	/* Thumbs: right column, text only (no images) */
 	.thumb {
 		grid-column: 2;
 		display: block;
@@ -2015,7 +1990,6 @@ ul {
 		margin-bottom: 2px;
 	}
 
-	/* Second thumb aligns with hero text */
 	.thumb:nth-child(2) {
 		grid-row: 3;
 	}
@@ -2024,7 +1998,6 @@ ul {
 		display: none;
 	}
 
-	/* Video: left column, spans 3 rows (so news items fit on right) */
 	.sidebar-video {
 		grid-column: 1;
 		grid-row: 4 / 7;
@@ -2038,7 +2011,6 @@ ul {
 		object-fit: cover;
 	}
 
-	/* News items: right column, text only */
 	.news-item {
 		grid-column: 2;
 		padding: 10px 0;
@@ -2053,7 +2025,10 @@ ul {
 		display: none;
 	}
 
-	/* Place first 4 news items in rows 4-7, column 2 */
+	.news-item {
+		margin-top: -10px;
+	}
+
 	.sidebar-news article:nth-child(1) {
 		grid-row: 4;
 	}
@@ -2070,12 +2045,10 @@ ul {
 		grid-row: 7;
 	}
 
-	/* Remaining news items (5th, 6th) overflow to left column */
 	.sidebar-news article:nth-child(n+5) {
 		grid-column: 1;
 	}
 
-	/* Topic Cluster Layout */
 	.topic-grid {
 		gap: 20px;
 	}
@@ -2096,7 +2069,6 @@ ul {
 		flex: 0 0 90px;
 	}
 
-	/* Section Titles for Tablet */
 	.topic-header {
 		margin-bottom: 10px !important;
 	}
@@ -2113,7 +2085,6 @@ ul {
 		margin-bottom: 12px !important;
 	}
 
-	/* Spacing for horizontal lines */
 	.topic-cluster,
 	.more-stories {
 		margin-top: 10px !important;
@@ -2128,7 +2099,6 @@ ul {
 		margin-bottom: 16px !important;
 	}
 
-	/* ===== More Top Stories Tablet Layout ===== */
 	.mts-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -2137,7 +2107,6 @@ ul {
 		row-gap: 0;
 	}
 
-	/* Featured block: image left, text right */
 	.mts-block {
 		display: contents !important;
 	}
@@ -2168,7 +2137,6 @@ ul {
 		display: none;
 	}
 
-	/* Cards: stacked in right column and stretched to align with left column */
 	.mts-cards {
 		grid-column: 2;
 		grid-row: 1 / 3;
@@ -2204,7 +2172,6 @@ ul {
 		margin-bottom: 2px;
 	}
 
-	/* Sidebar: 2 columns, 3 rows */
 	.mts-sidebar {
 		grid-column: 1 / 3;
 		grid-row: 3;
@@ -2240,7 +2207,6 @@ ul {
 		object-fit: cover;
 	}
 
-	/* ===== Go Deeper Tablet Layout ===== */
 	.go-deeper {
 		margin-top: 20px;
 		padding-top: 16px;
@@ -2251,7 +2217,6 @@ ul {
 		display: none;
 	}
 
-	/* ===== The Week in Politics Tablet Layout ===== */
 	.week-politics {
 		display: grid !important;
 		grid-template-columns: 1fr 1fr;
@@ -2272,12 +2237,20 @@ ul {
 		display: contents !important;
 	}
 
-	.wp-block {
+	.week-politics:not(.wp-sidebar-single) .wp-block {
 		grid-column: 1;
 		grid-row: 2 / 4;
 		display: flex !important;
 		flex-direction: column-reverse;
 		align-self: stretch;
+	}
+
+	.week-politics.wp-sidebar-single .wp-block {
+		grid-column: 1;
+		grid-row: 2;
+		display: flex !important;
+		flex-direction: column-reverse;
+		align-self: start;
 	}
 
 	.wp-featured-image img {
@@ -2289,7 +2262,7 @@ ul {
 
 	.wp-featured-text {
 		padding-top: 8px;
-		padding-bottom: 12px;
+		padding-bottom: 4px;
 	}
 
 	.wp-featured-text p {
@@ -2303,10 +2276,10 @@ ul {
 	.wp-sidebar-card,
 	.wp-card {
 		display: grid !important;
-		grid-template-columns: 1fr 90px;
-		gap: 0 12px;
+		grid-template-columns: 1fr 100px;
+		gap: 0 16px;
 		align-items: start;
-		padding: 8px 0;
+		padding: 4px 0;
 		border: none;
 		max-width: 100% !important;
 	}
@@ -2319,8 +2292,9 @@ ul {
 	.wp-card img {
 		grid-column: 2;
 		grid-row: 1 / 4;
-		width: 90px !important;
-		height: 90px !important;
+		width: 100px !important;
+		height: 100px !important;
+		aspect-ratio: 1 / 1 !important;
 		object-fit: cover;
 	}
 
@@ -2336,30 +2310,57 @@ ul {
 		grid-column: 1;
 	}
 
-	/* Grid placement */
-	.wp-sidebar-card {
+	/* Layout for WP and MoneyWatch (2 sidebar articles) */
+	.week-politics:not(.wp-sidebar-single) .wp-sidebar-card {
 		grid-column: 2;
 		grid-row: 2;
 		align-self: start;
 	}
 
-	.wp-card:nth-child(2) {
+	.week-politics:not(.wp-sidebar-single) .wp-card:nth-child(1) {
+		grid-column: 2;
+		grid-row: 3;
+		align-self: start;
+		margin-top: 40px;
+	}
+
+	.week-politics:not(.wp-sidebar-single) .wp-card:nth-child(2) {
+		grid-column: 1;
+		grid-row: 4;
+		align-self: start;
+	}
+
+	.week-politics:not(.wp-sidebar-single) .wp-card:nth-child(3) {
 		grid-column: 2;
 		grid-row: 4;
 		align-self: start;
 	}
 
-	.wp-card:nth-child(1) {
+	/* Layout for U.S., Politics, etc. (1 sidebar article) */
+	.week-politics.wp-sidebar-single .wp-sidebar-card {
+		grid-column: 2;
+		grid-row: 2;
+		align-self: start;
+	}
+
+	.week-politics.wp-sidebar-single .wp-card:nth-child(1) {
+		grid-column: 1;
+		grid-row: 3;
+		align-self: start;
+	}
+
+	.week-politics.wp-sidebar-single .wp-card:nth-child(2) {
+		grid-column: 2;
+		grid-row: 3;
+		align-self: start;
+	}
+
+	.week-politics.wp-sidebar-single .wp-card:nth-child(3) {
 		grid-column: 1;
 		grid-row: 4;
+		align-self: start;
 	}
 
-	.wp-card:nth-child(3) {
-		grid-column: 1;
-		grid-row: 5;
-	}
-
-	/* ===== Managing Your Money Tablet Layout ===== */
 	.managing-money {
 		margin-top: 20px !important;
 		padding-top: 20px !important;
@@ -2385,7 +2386,6 @@ ul {
 		line-height: 1.25 !important;
 	}
 
-	/* ===== Top Videos Tablet Layout ===== */
 	.top-videos {
 		padding-top: 0 !important;
 		padding-bottom: 15px !important;
@@ -2480,7 +2480,6 @@ ul {
 		color: #fff !important;
 	}
 
-	/* ===== Live Channels Tablet Layout ===== */
 	.live-channels {
 		padding: 20px 0 !important;
 	}
@@ -2495,7 +2494,6 @@ ul {
 
 	.lc-grid {
 		display: none !important;
-		/* Hide desktop logo cards */
 	}
 
 	.lc-mobile-view {
@@ -2505,7 +2503,6 @@ ul {
 
 	.lc-title {
 		display: none !important;
-		/* Hide mobile title */
 	}
 
 	.lc-new-grid {
@@ -2523,7 +2520,6 @@ ul {
 
 	.lc-new-card:nth-child(n+5) {
 		display: none !important;
-		/* Show only 4 cards */
 	}
 
 	.lc-img-wrapper img {
@@ -2551,7 +2547,6 @@ ul {
 		opacity: 0.7 !important;
 	}
 
-	/* ─── THE DISH, 60 MINUTES (CBS Mornings clone) Tablet ─── */
 	.evening-news-desktop-view,
 	.sixty-minutes-desktop-view,
 	.categories-desktop-view {
@@ -2571,7 +2566,6 @@ ul {
 		margin-bottom: 0px !important;
 	}
 
-	/* Restore meta for CBS Mornings section since it was hidden globally for .tv-text-col */
 	.dish-mobile-view .tv-text-col .meta {
 		display: block !important;
 		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif !important;
@@ -2587,7 +2581,6 @@ ul {
 		color: #fff !important;
 	}
 
-	/* "More from..." button */
 	.dish-more {
 		display: block !important;
 		border: 1px solid #fff !important;
@@ -2607,7 +2600,6 @@ ul {
 		color: #000 !important;
 	}
 
-	/* ===== Footer Tablet Layout ===== */
 	.footer {
 		padding: 25px 0 80px !important;
 	}
@@ -2716,18 +2708,15 @@ ul {
 		position: relative;
 	}
 
-	/* ─── HEADER ─────────────────────────────── */
 	.header-top-inner {
 		padding: 10px 16px;
 		gap: 0;
 	}
 
-	/* Hide desktop primary nav */
 	.primary-nav {
 		display: none;
 	}
 
-	/* Show hamburger (9-dot grid icon) */
 	.hamburger-btn {
 		display: grid;
 		grid-template-columns: repeat(3, 5px);
@@ -2748,32 +2737,27 @@ ul {
 		border-radius: 50%;
 	}
 
-	/* Logo stays centered */
 	.logo {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 	}
 
-	/* Hide secondary nav (topic pills) */
 	.main-header {
 		display: none;
 	}
 
-	/* ─── MEGA CONTAINER ─────────────────────── */
 	.mega-container {
 		padding: 0 16px;
 		overflow: visible;
 	}
 
-	/* ─── MAIN CONTAINER ─────────────────────── */
 	.main-container {
 		grid-template-columns: 1fr;
 		gap: 0;
 		margin-top: 16px;
 	}
 
-	/* ─── HERO CONTENT ───────────────────────── */
 	.hero-section {
 		display: contents;
 	}
@@ -2802,7 +2786,6 @@ ul {
 		order: 4;
 	}
 
-	/* Image comes first */
 	.hero-image {
 		order: 1;
 		grid-column: unset;
@@ -2817,7 +2800,6 @@ ul {
 		display: block;
 	}
 
-	/* Text comes second */
 	.hero-text {
 		order: 2;
 		grid-column: unset;
@@ -2845,7 +2827,6 @@ ul {
 		color: #333;
 	}
 
-	/* ─── HERO THUMBNAILS ─────────────────────── */
 	.hero-thumbnails {
 		grid-template-columns: 1fr;
 		gap: 0;
@@ -2894,7 +2875,6 @@ ul {
 		color: #333;
 	}
 
-	/* ─── SIDEBAR ─────────────────────────────── */
 	.sidebar {
 		gap: 0;
 	}
@@ -2933,6 +2913,19 @@ ul {
 		align-self: start;
 	}
 
+	.topic-header h2 {
+		margin-top: 0px;
+		font-size: 27px;
+	}
+
+	.tv-grid {
+		margin-bottom: -10px;
+	}
+
+	.lc-new-grid {
+		margin-bottom: 0px;
+	}
+
 	.news-item .tag {
 		display: none;
 	}
@@ -2956,7 +2949,6 @@ ul {
 		color: #333;
 	}
 
-	/* ─── TOPIC CLUSTER ──────────────────────── */
 	.topic-cluster .meta,
 	.more-stories .meta,
 	.week-politics .meta {
@@ -3020,7 +3012,6 @@ ul {
 		flex: 0 0 90px;
 	}
 
-	/* ─── MORE TOP STORIES ───────────────────── */
 	.more-stories {
 		margin-top: 20px;
 		padding-top: 2px;
@@ -3042,7 +3033,6 @@ ul {
 		gap: 0;
 	}
 
-	/* Featured image first */
 	.mts-featured-image {
 		order: 1;
 		grid-column: unset;
@@ -3058,7 +3048,6 @@ ul {
 		display: block;
 	}
 
-	/* Featured text second */
 	.mts-featured-text {
 		order: 2;
 		grid-column: unset;
@@ -3077,7 +3066,6 @@ ul {
 		display: none;
 	}
 
-	/* Cards third */
 	.mts-cards {
 		order: 3;
 		display: flex;
@@ -3123,7 +3111,6 @@ ul {
 		margin-top: 0;
 	}
 
-	/* Sidebar items last */
 	.mts-sidebar {
 		order: 4;
 		grid-column: unset;
@@ -3147,8 +3134,6 @@ ul {
 		flex: 0 0 90px;
 	}
 
-	/* ─── GO DEEPER ──────────────────────────── */
-	/* calc(-50vw + 50%) already handles full-bleed with 16px container padding */
 	.go-deeper {
 		margin-top: 12px;
 		padding-top: 20px;
@@ -3175,7 +3160,6 @@ ul {
 		display: none;
 	}
 
-	/* ─── WEEK IN POLITICS / MONEYWATCH ─────── */
 	.week-politics {
 		margin-top: 0;
 		display: flex;
@@ -3294,7 +3278,6 @@ ul {
 		background-color: rgba(210, 210, 210, 0.5);
 	}
 
-	/* ─── MANAGING YOUR MONEY ────────────────── */
 	.managing-money {
 		padding-top: 16px;
 		padding-bottom: 40px;
@@ -3361,7 +3344,6 @@ ul {
 		text-decoration: none;
 	}
 
-	/* ─── TOP VIDEOS ─────────────────────────── */
 	.top-videos {
 		padding-top: 0;
 		padding-bottom: 10px;
@@ -3373,7 +3355,6 @@ ul {
 		margin-bottom: 12px;
 	}
 
-	/* Featured video comes first */
 	.tv-featured-video {
 		order: 1;
 		margin-top: 0;
@@ -3390,7 +3371,6 @@ ul {
 		display: block;
 	}
 
-	/* Text col comes second */
 	.tv-text-col {
 		order: 2;
 		width: 100%;
@@ -3441,7 +3421,6 @@ ul {
 		line-height: 1.2;
 	}
 
-	/* ─── LIVE CHANNELS ──────────────────────── */
 	.lc-desktop-view {
 		display: none;
 	}
@@ -3522,7 +3501,6 @@ ul {
 		text-decoration: underline;
 	}
 
-	/* ─── THE DISH, 60 MINUTES & U.S. ──────────────────────────── */
 	.evening-news-desktop-view,
 	.sixty-minutes-desktop-view,
 	.categories-desktop-view {
@@ -3688,6 +3666,14 @@ ul {
 		padding: 0;
 	}
 
+	.meta {
+		margin-bottom: 20px;
+	}
+
+	.topic-title {
+		margin-top: 16px;
+	}
+
 	.nav-links li>a svg {
 		display: none;
 	}
@@ -3758,7 +3744,6 @@ ul {
 		margin-bottom: 16px;
 	}
 
-	/* Disable hover effects on mobile */
 	.nav-links a:hover,
 	.nav-links .popup-content p:hover,
 	.nav-links .three-dots-popup p:hover {
@@ -3841,5 +3826,525 @@ ul {
 		margin: 0 auto;
 		padding: 0 20px;
 		box-sizing: border-box;
+	}
+}
+
+@media (min-width: 1020px) and (max-width: 1359px) {
+
+	html,
+	body {
+		overflow-x: hidden !important;
+	}
+
+	.mega-container {
+		padding: 0 15px 0 15px;
+	}
+
+	.header-container,
+	.under-header-container {
+		max-width: none !important;
+		margin: 0 !important;
+		padding-left: 15px !important;
+	}
+
+	.header-navs-container {
+		margin-left: 5px !important;
+	}
+
+	.header-logo-container {
+		transform: translate(-50%, 0) translateX(18px) !important;
+	}
+
+	.header-logo-container svg {
+		width: 230px !important;
+	}
+
+	.go-deeper-inner {
+		max-width: 980px;
+	}
+
+	.go-deeper-grid,
+	.managing-money-grid {
+		grid-template-columns: repeat(3, 300px);
+		justify-content: space-between;
+	}
+
+	.managing-money {
+		padding-bottom: 40px;
+	}
+
+	.main-container {
+		margin-top: 40px !important;
+		row-gap: 0;
+	}
+
+	.main-container,
+	.week-politics-top {
+		grid-template-columns: 640px 300px;
+		justify-content: space-between;
+	}
+
+	.mts-grid {
+		grid-template-columns: 640px auto;
+		column-gap: 40px;
+		justify-content: space-between;
+		row-gap: 0;
+	}
+
+	.hero-section {
+		display: contents;
+	}
+
+	.hero-content,
+	.mts-block,
+	.wp-block {
+		display: flex;
+		flex-direction: column-reverse;
+		grid-column: 1;
+		grid-row: 1;
+		align-self: start;
+	}
+
+	.mts-sidebar {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	.wp-sidebar-card {
+		grid-column: 2;
+	}
+
+	.wp-bottom-cards {
+		grid-column: 1 / 3;
+		display: grid;
+		grid-template-columns: 300px 300px 300px;
+		justify-content: space-between;
+	}
+
+	.wp-card:last-child {
+		margin-top: -335px;
+	}
+
+	.mts-cards {
+		grid-column: 1;
+		grid-row: 2;
+		display: grid;
+		grid-template-columns: 300px 300px;
+		justify-content: space-between;
+	}
+
+	.sidebar {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	.hero-thumbnails {
+		grid-column: 1;
+		grid-row: 2;
+		display: grid;
+		grid-template-columns: 300px 300px;
+		justify-content: space-between;
+	}
+
+	.thumb img,
+	.mts-card img,
+	.go-deeper-card img,
+	.mm-card img {
+		width: 100%;
+		aspect-ratio: 300 / 169;
+		object-fit: cover;
+	}
+
+	.news-item,
+	.mts-sidebar-item {
+		padding: 8px 0;
+	}
+
+	.mts-sidebar-item {
+		margin-bottom: 20px;
+	}
+
+	.mts-featured-text {
+		margin-top: 14px;
+	}
+
+	.hero-text h1,
+	.mts-featured-text h3,
+	.wp-featured-text h3 {
+		font-family: 'Publico Headline', 'Playfair Display', serif;
+		font-size: 32px;
+		font-weight: 700;
+		margin-top: -10px;
+	}
+
+	.hero-text p,
+	.topic-card-text p,
+	.mts-featured-text p,
+	.wp-featured-text p,
+	.mm-card p,
+	.tv-text-col p {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+
+	.news-item h2,
+	.topic-card-text h3,
+	.tv-card h3 {
+		font-family: 'Publico Headline', 'Playfair Display', serif;
+		font-size: 17px;
+		font-weight: 700;
+	}
+
+	.thumb h2,
+	.mts-card h3,
+	.wp-card h3,
+	.wp-sidebar-card h3,
+	.mm-card h3,
+	.tv-text-col h3 {
+		font-family: 'Publico Headline', 'Playfair Display', serif;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 26px;
+	}
+
+	.mm-sublinks a {
+		font-family: 'Proxima Nova', 'Montserrat', 'Roboto', sans-serif;
+	}
+
+	.mts-card {
+		margin-bottom: -35px;
+	}
+
+	.sidebar-news {
+		margin-top: 12px;
+	}
+
+	.more-link-inline {
+		margin-left: 8px;
+	}
+
+	.topic-title,
+	.section-title,
+	.go-deeper-inner h2,
+	.managing-money-header h2,
+	.evening-news-title {
+		font-family: 'Publico Headline', 'Playfair Display', serif;
+		font-size: 45px;
+		font-weight: 900;
+		margin-top: 7px;
+	}
+
+	.evening-news-title {
+		margin-top: -8px;
+	}
+
+	.live-badge {
+		margin-bottom: 20px;
+	}
+
+	.go-deeper-inner h2 {
+		margin-top: -10px;
+		margin-bottom: 20px;
+	}
+
+	.topic-card-text p {
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.go-deeper-card p {
+		margin-bottom: 2px;
+	}
+
+	.meta {
+		margin-top: 4px;
+	}
+
+	.hero-image img,
+	.mts-featured-image img,
+	.wp-featured-image img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 640 / 440;
+		object-fit: cover;
+	}
+
+	.sidebar-video img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 300 / 169;
+		object-fit: cover;
+	}
+
+	.wp-featured-text h3 {
+		margin-top: 5px;
+	}
+
+	.top-videos-inner {
+		width: 980px;
+		margin: 0 auto;
+	}
+
+	.evening-news-desktop-view,
+	.sixty-minutes-desktop-view {
+		display: block !important;
+	}
+
+	.categories-desktop-view {
+		display: grid !important;
+	}
+
+	.dish-mobile-view,
+	.us-mobile-section {
+		display: none !important;
+	}
+
+	.tv-header-row {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.tv-text-col {
+		width: 215px;
+		flex-shrink: 0;
+	}
+
+	.tv-text-col h3 {
+		margin-bottom: 10px;
+	}
+
+	.tv-featured-video {
+		flex-shrink: 0;
+		width: 725px;
+		margin-top: 0 !important;
+	}
+
+	.tv-featured-video img {
+		width: 725px;
+		height: 408px;
+		object-fit: cover;
+	}
+
+	.tv-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 215px);
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.tv-card img {
+		width: 215px;
+		height: 121px;
+		object-fit: cover;
+	}
+
+	.live-channels-inner {
+		width: 980px;
+		margin: 0 auto;
+	}
+
+	.lc-grid {
+		grid-template-columns: repeat(4, 221px);
+		justify-content: space-between;
+	}
+
+	.lc-card {
+		min-height: 90px;
+		padding: 10px 10px;
+		width: 210px;
+	}
+
+	.lc-card-logo {
+		margin-right: 15px;
+		padding-right: 25px;
+		padding-left: 10px;
+	}
+
+	.lc-card-text {
+		font-size: 12px;
+		line-height: 1.15;
+		max-width: 110px;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.lc-header {
+		height: 45px;
+	}
+
+	.categories-desktop-view {
+		display: grid !important;
+		grid-template-columns: repeat(3, 300px);
+		justify-content: space-between;
+		width: 980px;
+		margin: 0 auto;
+		row-gap: 50px;
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+
+	.categories-desktop-view .news-categories,
+	.categories-desktop-view .news-categories-inner,
+	.categories-desktop-view .cat-grid {
+		display: contents;
+	}
+
+	.cat-news-list li {
+		margin-bottom: 14px !important;
+	}
+
+	.cat-news-list li a {
+		line-height: 1.25 !important;
+	}
+
+	.footer {
+		width: 100vw !important;
+		position: relative !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		padding-top: 30px !important;
+		padding-bottom: 80px;
+		margin-top: 25px;
+	}
+
+	.footer-container {
+		width: 100% !important;
+		max-width: none !important;
+		margin: 0 auto;
+		padding: 0 40px !important;
+		align-items: stretch !important;
+	}
+
+	.footer-logo svg {
+		width: 280px;
+		transform: translateX(40px);
+		align-self: center;
+	}
+
+	.footer-links {
+		width: 100% !important;
+		grid-template-columns: repeat(5, 1fr);
+		column-gap: 40px;
+	}
+
+	.footer-links-title {
+		margin-bottom: 2px;
+		white-space: nowrap;
+	}
+
+	.footer-links-item a {
+		white-space: nowrap;
+	}
+
+	.footer-links-group:nth-child(5) .footer-links-item:nth-child(4) a {
+		white-space: normal !important;
+		display: block;
+		max-width: 120px;
+		line-height: 1.1;
+	}
+
+	.footer-copyright {
+		margin-top: 40px;
+	}
+}
+
+@media (min-width: 1360px) {
+	.footer-logo svg {
+		width: 310px !important;
+		transform: translateX(45px) translateY(-10px);
+		margin-bottom: 30px !important;
+	}
+
+	.header-logo-container {
+		transform: translateX(-50%) translateX(20px) !important;
+	}
+
+	.header-logo-container svg {
+		width: 230px !important;
+	}
+
+	.more-stories h2,
+	.week-politics h2 {
+		margin-top: 0px;
+	}
+
+	.go-deeper h2 {
+		margin-top: -10px;
+		margin-bottom: 20px;
+	}
+
+	.go-deeper-grid {
+		margin-bottom: -20px;
+	}
+
+	/* --- Alignment & Shifts for Full Desktop --- */
+	.mts-grid {
+		grid-template-columns: 300px 1fr 1fr 310px;
+	}
+
+	.mts-featured-image {
+		grid-column: 2 / 4;
+		margin-left: 15px;
+	}
+
+	.mts-sidebar {
+		grid-column: 4;
+	}
+
+	.mts-cards {
+		grid-column: 1 / 4;
+		grid-template-columns: 300px auto;
+		margin-top: 25px;
+	}
+
+	.mts-cards .mts-card:nth-child(2) {
+		margin-left: 15px;
+	}
+
+	.week-politics-top {
+		grid-template-columns: 290px 1fr 1fr 285px;
+	}
+
+	.wp-block {
+		display: contents;
+	}
+
+	.wp-featured-text {
+		grid-column: 1;
+	}
+
+	.wp-featured-image {
+		grid-column: 2 / 4;
+		margin-left: 15px;
+	}
+
+	.wp-sidebar-card {
+		grid-column: 4;
+	}
+
+	.wp-bottom-cards {
+		grid-template-columns: 290px 1fr 1fr 285px;
+		gap: 25px;
+	}
+
+	.wp-bottom-cards .wp-card:nth-child(1) {
+		grid-column: 1;
+	}
+
+	.wp-bottom-cards .wp-card:nth-child(2) {
+		grid-column: 2;
+		margin-left: 15px;
+	}
+
+	.wp-bottom-cards .wp-card:nth-child(3) {
+		grid-column: 3;
+		justify-self: end;
 	}
 }
